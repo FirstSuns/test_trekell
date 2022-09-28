@@ -1,0 +1,17 @@
+{% capture raw_key %}{% include 'ws-group-key' %}{% endcapture %}
+{% assign ws_group_key = raw_key | strip %}
+{% assign discount_group = shop.metafields.ws_groups[ws_group_key] %}
+{% assign itemId = item.id | strip %}
+{% assign custom_price = item.product.metafields.ws_genius.custom_prices[ws_group_key][itemId] %}
+{% assign line_price = item.line_price %}
+{% if discount_group.type == "local" and custom_price and custom_price != "" %}
+    {% assign line_price = custom_price | times: 100 | times: item.quantity %}
+{% elsif discount_group.type == "global" and discount_group.discount %}
+    {% assign discount = item.line_price | times: discount_group.discount | floor | divided_by: 100  %}
+    {% assign line_price = item.line_price | minus: discount %}
+{% endif %}
+{% if money %}
+    {{ line_price | money }}
+{% else %}
+    {{ line_price }}
+{% endif %}

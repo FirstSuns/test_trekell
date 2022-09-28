@@ -1,0 +1,35 @@
+{% if product %}
+    {% assign item_variant = product.selected_or_first_available_variant %}
+    {% assign item_product = product %}
+{% endif %}
+{% if variant %}
+    {% assign item_variant = variant %}
+{% endif %}
+{% if item %}
+    {% if item.object_type == "product" %}
+        {% assign item_variant = item.selected_or_first_available_variant %}
+        {% assign item_product = item %}
+    {% else %}
+        {% assign item_variant = item %}
+    {% endif %}
+    {% if item.product %}
+        {% assign item_product = item.product %}
+    {% endif %}
+{% endif %}
+{% capture raw_key %}{% include 'ws-group-key' %}{% endcapture %}
+{% assign ws_group_key = raw_key | strip %}
+{% assign discount_group = shop.metafields.ws_groups[ws_group_key] %}
+{% assign variantId = item_variant.id | strip %}
+{% assign custom_price = item_product.metafields.ws_genius.custom_prices[ws_group_key][variantId] %}
+{% assign price = item_variant.price %}
+{% if discount_group.type == "local" and custom_price and custom_price != "" %}
+    {% assign price = custom_price | times: 100 %}
+    {% elsif discount_group.type == "global" and discount_group.discount %}
+    {% assign discount = item_variant.price | times: discount_group.discount | floor | divided_by: 100  %}
+    {% assign price = item_variant.price | minus: discount %}
+{% endif %}
+{% if money %}
+    {{ price | money }}
+{% else %}
+    {{ price }}
+{% endif %}

@@ -1,0 +1,376 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1661901574709300d2": {
+      "type": "rich-text",
+      "blocks": {
+        "166190157467e9f7a9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Trekell Is The Name To Know In Professional Art Supplies<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "166190157467e9f7a9-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "166190157467e9f7a9-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166190157467e9f7a9-0",
+        "166190157467e9f7a9-1",
+        "166190157467e9f7a9-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1661902224ddb0d158": {
+      "type": "image-banner",
+      "blocks": {
+        "1661902224e5f50ff6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "What makes Trekell special isn't just the art supplies, although we're pretty good at those, too.",
+            "heading_size": "h1"
+          }
+        },
+        "1661902224e5f50ff6-1": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "1661902224e5f50ff6-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1661902224e5f50ff6-0",
+        "1661902224e5f50ff6-1",
+        "1661902224e5f50ff6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about_page.webp",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1661902377d1b227fa": {
+      "type": "image-with-text",
+      "blocks": {
+        "166190237738c5e131-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "166190237738c5e131-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"It has been an honor working with Trekell over the years and watching the company grow,\" Trekell Pro Team member Greg \"Craola\" Simkins said, \"and I am honored to have a small part in what the company is doing.\"<\/p>",
+            "text_style": "body"
+          }
+        },
+        "166190237738c5e131-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166190237738c5e131-0",
+        "166190237738c5e131-1",
+        "166190237738c5e131-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Greg_Simkins_1.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16619018596e7077a6": {
+      "type": "rich-text",
+      "blocks": {
+        "1661901859fa56d521-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1661901859fa56d521-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><p>That sense of pride emanates throughout Trekell's product line. For nearly 40 years, Trekell has made some of the finest art supplies for artists of all levels. And we've been so successful in those endeavors because of our core values and makeup. What began as one person's mission to sell quality brushes at an unbeatable value in a market bereft of options has blossomed into one of the few woman-owned, majority woman-operated art supply companies in America.<\/p><p>Under President Courtney Bridges's leadership, Trekell's name has become synonymous with a forward-thinking, innovative approach. Never one to let the old gates and their keepers stand in the way of progress, Bridges and her team have worked tirelessly to push art supplies into the future and the hands of the next generation. That tenacious evolution has led to advances in production and sustainability. It has also fostered a new way of thinking, reconfiguring dusty ideals to better suit an increasingly diverse market. And the catalyst that continues to drive us was listening to what artists really needed.<\/p>"
+          }
+        },
+        "1661901859fa56d521-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1661901859fa56d521-0",
+        "1661901859fa56d521-1",
+        "1661901859fa56d521-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "166196951302b7bb9c": {
+      "type": "image-with-text",
+      "blocks": {
+        "16619695135afbcdab-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "16619695135afbcdab-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"I tried Trekell products a couple years ago on my quest to find materials that withstood more than a couple of paintings' worth of use,\" Trekell Pro Team member Kate Zambrano recalled. \"I actually remember the day I first used them, because comparatively, they blew the other brushes out of the water. Most everything that wasn't Trekell I threw away. I don't know what sort of wizardry these products are made with, but I will now and forever be a loyal fan and avid supporter. They truly make my art-life easier.\"<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16619695135afbcdab-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16619695135afbcdab-0",
+        "16619695135afbcdab-1",
+        "16619695135afbcdab-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Katie_1024x1024_396a598a-0319-40df-9a33-2376c969b230.webp",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16619020629010a921": {
+      "type": "image-banner",
+      "blocks": {
+        "1661902062249cdd11-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trekell has gone beyond the brush.",
+            "heading_size": "h1"
+          }
+        },
+        "1661902062249cdd11-1": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "1661902062249cdd11-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1661902062249cdd11-0",
+        "1661902062249cdd11-1",
+        "1661902062249cdd11-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about_nikki.webp",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1661902161866088ab": {
+      "type": "rich-text",
+      "blocks": {
+        "1661902161c2904492-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1661902161c2904492-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>That statement can be interpreted literally and figuratively. Literally: Trekell's ever-expanding product line provides innumerable options to help realize your creative potential. <br\/><br\/>Figuratively: Trekell focuses on the essential element beyond the brush, you, the artist. Combined, these twin aims help us bridge our past as humble brushmakers to our present as leaders in art supply ingenuity.<\/p><p>Trekell has been a word-of-mouth favorite of the self-professed \"materials nerd\" community for the reasons Johnson enumerated above. But we continue to capture the attention of up-and-coming artists because the company feels like a family.<br\/><br\/>Once you're in, you feel the love, respect, and support of a company that genuinely cares. After all, we're pretty good at art supplies, but what makes us special is that sense of belonging. We're the family you choose that will always go beyond. It's time to find your home. Join us, won't you?<\/p>"
+          }
+        },
+        "1661902161c2904492-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1661902161c2904492-0",
+        "1661902161c2904492-1",
+        "1661902161c2904492-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16619699076a0caef7": {
+      "type": "image-with-text",
+      "blocks": {
+        "1661969907697d4bde-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1661969907697d4bde-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"Trekell is one of my all-time favorite brands for these three reasons: quality, price, and ethics,\" said Trekell Pro Team member Eric Johnson. \"I spent years making my own pigments, grinding my own paint, and even making my own brushes. To sum it up, I am a materials nerd! After years of research and experience I settled down and really just wanted to have more time to paint. My good friend and fellow artist, Julie Beck, introduced me to Trekell.\"<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1661969907697d4bde-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1661969907697d4bde-0",
+        "1661969907697d4bde-1",
+        "1661969907697d4bde-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Eric_Johnson_A_f4a775d0-3653-43cd-8058-e2f374a19977.webp",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1661901574709300d2",
+    "1661902224ddb0d158",
+    "1661902377d1b227fa",
+    "16619018596e7077a6",
+    "166196951302b7bb9c",
+    "16619020629010a921",
+    "1661902161866088ab",
+    "16619699076a0caef7"
+  ]
+}

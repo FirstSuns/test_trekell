@@ -1,0 +1,87 @@
+{% assign iconsA = ''%}
+{% for variant in product.variants %} 
+{% unless variant.metafields.secomapp.freegifts %}
+{% unless variant.title contains '% off)' %}
+
+
+{% assign temp1 = variant.image.src | img_url: '68x68'%}
+{% assign temp2 = variant.metafields.custom_fields["quick_link_icon"] %}
+
+	{% assign tem = variant.option1 %}
+	{% if typesA == variant.option1 or typesA contains variant.option1 %}
+		
+	 {% else %}
+			{% assign typesA = typesA | append: tem %}
+			{% assign typesA = typesA | append: ',' %}
+
+
+            {% assign imagessA = imagessA | append: temp1 %}     
+            {% assign imagessA = imagessA | append: ',' %}
+
+            {% assign iconsA = iconsA | append: temp2 %}     
+            {% assign iconsA = iconsA | append: ',' %}
+	 {% endif %}
+
+{% endunless %}
+{% endunless %}
+{%endfor%}
+{% assign types = typesA | split: ","  %}
+{% assign images= imagessA | split: ","  %}
+{% assign icons= iconsA | split: ","  %}
+
+{% assign count = types | size %}
+<div class="collection-products-quicklinks" style="position:relative;">
+{% if type=='Gamblin1980' %}
+<h3 style="text-transform: uppercase;">Quick Links</h3>
+                <ul class="product-quick-links oil-quicklinks" style="color:#000">
+                  {% if collections.gamblin-1980-oil-colors.products.size > 0 %}
+                  {% for product in collections.gamblin-1980-oil-colors.products %}
+                  <li>
+                    <a href="#{{ product.handle }}">
+                      <span style="padding: 10px;background: #F0F0F0;">{% if product.metafields.custom_fields["quick_link_text"] != blank %}{{product.metafields.custom_fields["quick_link_text"]}}{%else%}{{ product.title }} {%endif%}   </span>
+                    </a>
+                  </li>
+                  {%endfor%}  
+                  {%endif%}
+                </ul>
+{% else %}
+
+  
+  {% if type=='brush' %}
+  	<h3>SELECT BRUSH SERIES</h3>
+  {% elsif type=='panels' %}
+  	<h3>SELECT PANEL FINISH</h3>
+  {% else %}
+  	<h3>SELECT PRODUCT</h3>
+  {%endif%}
+  
+  {%if type=='brush'%}
+   	{% assign class="brush-quicklinks" %}
+  {%else%}
+  	{% assign class="oil-quicklinks" %}
+  {%endif%}
+  <ul class="product-quick-links {% if count>5 %} brush-quicklinks{%endif%}" style="color:#000">
+  {% for type in types %}
+    <li>
+      <a href="#{{type | handleize}}">   
+        
+        {% if icons[forloop.index0] != blank %}
+        	<img src="{{icons[forloop.index0]}}"  class="rimage-background__image" />
+        {%else%}
+        	<img src="{{images[forloop.index0]}}"  class="rimage-background__image" />
+        {%endif%}
+        <span>{{type}}</span>
+      </a>
+    </li>
+    {%endfor%}  
+  </ul>
+  {% if count > 5 %}
+    <div class="full-width-slideshow-controls featured-nav full-width-slideshow-controls--prev">
+      	<button class="btn--plain prev icon feather-icon">{% include 'feather-arrow-left' %}</button>
+      </div>
+      <div class="full-width-slideshow-controls featured-nav full-width-slideshow-controls--next">
+      	<button class="btn--plain next icon feather-icon">{% include 'feather-arrow-right' %}</button>
+      </div>
+  {%endif%}
+    {%endif%}
+</div>

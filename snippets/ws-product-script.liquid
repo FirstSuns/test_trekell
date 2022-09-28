@@ -1,0 +1,27 @@
+{% capture raw_key %}{% include 'ws-group-key' %}{% endcapture %}
+{% assign ws_group_key = raw_key | strip %}
+{% assign discount_group = shop.metafields.ws_groups[ws_group_key] %}
+{% assign custom_prices = product.metafields.ws_genius.custom_prices[ws_group_key] %}
+{% if discount_group %}
+  <script>
+    var customVariantPrices = {{ custom_prices | json }} || {};
+    var discountGroup = {{ discount_group | json }};
+    var getCustomVariantPrice = function(variant) {
+      var price = variant.price;
+      var customPrice = customVariantPrices[variant.id];
+      if (discountGroup.type === 'local' && customPrice) {
+        price = customPrice * 100;
+      }
+      if (discountGroup.type === 'global' && discountGroup.discount) {
+        var discount = Math.floor(variant.price * discountGroup.discount / 100);
+        price -= discount;
+      }
+      return price;
+    };
+
+    window.wsGenius = {
+      discountGroup: discountGroup,
+      getVariantPrice: getCustomVariantPrice
+    };
+  </script>
+{% endif %}

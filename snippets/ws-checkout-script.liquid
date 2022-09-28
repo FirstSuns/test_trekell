@@ -1,0 +1,105 @@
+{% capture raw_key %}{% include 'ws-group-key' %}{% endcapture %}
+{% assign ws_group_key = raw_key | strip %}
+{% assign discount_group = shop.metafields.ws_groups[ws_group_key] %}
+{% assign hmac = shop.permanent_domain | append: customer.id | hmac_sha256: shop.metafields.ws_genius.secret %}
+{% if discount_group %}
+    <script>
+      var checkout = {};
+      checkout.hmac = {{ hmac | json }};
+      checkout.shop = {{ shop.permanent_domain | json }};
+      checkout.customerId = {{ customer.id | json }};
+      var checkoutUrl = "{{ shop.metafields.ws_genius.checkout_url }}";
+      var errorMessage = 'Something went wrong. Please contact support.';
+
+      function startLoading(e) {
+        e.target.disabled = true;
+        document.body.style.cursor = 'wait';
+      }
+
+      function stopLoading(e) {
+        e.target.disabled = false;
+        document.body.style.cursor = 'default';
+      }
+
+      function handleRedirect(data) {
+        if (!data.redirectTo) alert("Missing redirect url");
+        if (data.pendingOrder) {
+          request({
+            method: 'POST',
+            url: '/cart/clear.js',
+            cb: function() {
+              window.location.href = data.redirectTo;
+            }
+          });
+        } else {
+          window.location.href = data.redirectTo;
+        }
+      }
+
+      function request(params) {
+        var r = new XMLHttpRequest();
+        r.open(params.method, params.url, true);
+        r.setRequestHeader('Content-Type', 'application/json');
+        r.onload = function() {
+          try {
+            const data = JSON.parse(r.responseText);
+            if (r.status >= 200 && r.status < 400) {
+              params.cb(null, data);
+            } else {
+              params.cb(data.message);
+            }
+          } catch (error) {
+            params.cb(errorMessage);
+          }
+        };
+        r.onerror = function() {
+          params.cb(errorMessage);
+        };
+        r.send(params.data ? JSON.stringify(params.data) : undefined);
+      }
+
+      function updateCart(cb) {
+        var updates = [];
+        [].forEach.call(document.querySelectorAll('input[name="updates[]"]'), function(input) {
+          updates.push(parseInt(input.value));
+        });
+        request({
+          method: 'POST',
+          url: '/cart/update.js',
+          data: {updates: updates},
+          cb: cb
+        });
+      }
+
+      function createCheckout(e) {
+        e.preventDefault();
+        startLoading(e);
+
+        function handleError(error) {
+          stopLoading(e);
+          return alert(error);
+        }
+
+        function handleResponse(error, data) {
+          if (error) return handleError(error);
+          handleRedirect(data);
+        }
+
+        updateCart(function(error, data) {
+          if (error) return handleError(error);
+          checkout.items = data.items;
+          request({
+            method: 'POST',
+            url: checkoutUrl,
+            data: checkout,
+            cb: handleResponse
+          });
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var checkoutBtn = document.querySelector('[name=checkout]');
+        checkoutBtn.addEventListener('click', createCheckout);
+      });
+    </script>
+{% endif %}

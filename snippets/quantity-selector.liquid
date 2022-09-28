@@ -1,0 +1,10 @@
+    <div class="quantity-wrapper qty-wrapper">
+      <span class="quantity-minus-wrapper change-quantity downarrow qtyminus"  field='updates_{{ variant.id }}' data-change="minus">
+        <span>-</span>
+      </span>
+      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %} data-max="{{ variant.inventory_quantity }}"{% endif %} data-price="{{ wsprice | money }}" type="text" name="updates[]" field='{{ variant.id }}'  id="updates_{{ variant.id }}" class="stickyquantity quantity" value="0"  />
+<!--       <input type="number" min="1" size="2" class="quantity" name="quantity" value="1" {% if product.variants.first.inventory_management == 'shopify' and product.variants.first.inventory_quantity > 0 and product.variants.first.inventory_policy == "deny" %}max="{{ product.variants.first.inventory_quantity }}"{% endif %} /> -->
+      <span class="quantity-plus-wrapper change-quantity uparrow qtyplus" data-change="plus"  field='updates_{{ variant.id }}'>
+        <span>+</span>
+      </span>
+    </div> 

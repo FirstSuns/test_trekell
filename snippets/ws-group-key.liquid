@@ -1,0 +1,7 @@
+{% assign ws_tag = '' %}
+{% for tag in customer.tags %}
+    {% if tag contains "ws_group:" %}
+        {% assign ws_tag = tag %}
+    {% endif %}
+{% endfor %}
+{{ws_tag | split: ':' | last }}

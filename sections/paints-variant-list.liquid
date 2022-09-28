@@ -1,0 +1,184 @@
+
+{% assign typesA ='' %}
+{% assign descriptionA ='' %}
+{% assign variantimagesA ='' %}
+
+{% for variant in product.variants %} 
+	{% assign temp1 = variant.option1 %}
+    {% assign temp2 = variant.metafields.custom_fields["variant_description"] %}
+    {% assign temp3 = variant.image.src | img_url: '300x300' %}
+
+	{% if typesA == variant.option1 or typesA contains variant.option1 %}
+		
+	 {% else %}
+			{% assign typesA = typesA | append: temp1 %}
+			{% assign typesA = typesA | append: ',' %}
+
+            {% assign descriptionA = descriptionA | append: temp2 %}
+			{% assign descriptionA = descriptionA | append: '|' %}
+
+            {% assign variantimagesA = variantimagesA | append: temp3 %}
+			{% assign variantimagesA = variantimagesA | append: ',' %}
+
+	 {% endif %}
+{%endfor%}
+{% assign type = typesA | split: ","  %}
+{% assign description = descriptionA | split: "|"  %}
+{% assign variantimages = variantimagesA | split: ","  %}
+
+<div class="page-width page-width collection-product-list product-variant-list brush_pro">
+  <div class="grid grid--uniform grid--uniform-row-gutters large-row">
+    {% for t in type %}  
+    <div id="{{t | handleize}}" class="product-item grid__item">
+      <div class="product-block product-aside grid__item two-sixths small-down--one-whole ">
+        <div class="variant-image">
+          <img src="{{variantimages[forloop.index0]}}"   />      
+        </div>
+        <h2>{{t}}</h2>
+        <p>{{description[forloop.index0]}}</p>
+      </div>
+      <div class="product-variant-section grid__item four-sixths product_table">
+        <table class="variant-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+                <th>MSRP</th>
+                <th>Price</th>
+                <th></th>
+                <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            {% assign typeArray ='-' %}
+            {% assign typeArray2 ='-' %}
+            {% assign i = 0 %}
+            {%comment%}{% assign temp1 = ' ' %}{%endcomment%}
+
+            {% for variant in product.variants %} 
+            {% assign temp1 = variant.option1 %}
+            {% if  temp1 == t %}
+
+            <tr id="{{ variant.id }}"> 
+              <td>{{ variant.option2 }}</td>                    
+              <td>${{ variant.metafields.custom_fields["msrp"] }}</td>
+              {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}
+              <td>{{ wsprice | money }}</td>
+              <td>
+                <!-- Wishlist Hero Button -->
+              {% assign productNameSuffix = variant.options | join: " / " | prepend: " : "  %}
+              {% include 'wishlisthero-collection-product' with product: product, forceSelectedVariant: variant, productNameSuffix: productNameSuffix , buttonClass: "wishlisthero-button-in-product-table"  %}
+              <!--/ Wishlist Hero Button -->
+              </td>
+              <td {%if variant.metafields.custom_fields["warning_symbol"] == 1 %} class="yellow-mark"{%endif%}>
+             {%comment%}
+              <div class="qty-wrapper">
+                <div class="qty-left">
+                  <div class="span-absolute"></div>
+                  <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %} data-max="{{ variant.inventory_quantity }}"{% endif %} data-price="{{ wsprice | money }}" type="text" name="updates[]" field='{{ variant.id }}'  id="updates_{{ variant.id }}" class="stickyquantity" value="0"  />
+                </div>
+                <div class="qty-right">
+                  <button class="uparrow qtyplus"  field='updates_{{ variant.id }}' >+</button>
+                  <button class="downarrow qtyminus"  field='updates_{{ variant.id }}'>-</button>
+                </div>
+              </div> 
+              {%endcomment%}
+                                
+				{%include 'quantity-selector' %} 
+                {%if variant.metafields.custom_fields["warning_symbol"] == 1 %}                      
+                <div class="exclamation-mark">
+                  <img src="{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}">
+                </div>
+                {%endif%}
+                {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}
+              <div class="out-stock">Out of Stock&nbsp;&nbsp;<a class="klaviyo-bis-trigger" href="#" style="display:block!important" data="{{ variant.id }}" onclick="setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );">Notify Me</a></div> 
+             {% endif %}
+              </td>
+            </tr>
+            {% assign i = i | plus: 1 %}
+
+            {% else %}
+
+            {% endif %}
+            {%endfor%} 
+
+          </tbody>
+        </table>         
+
+       <div class="mobile-variant-table">
+            {% for variant in product.variants %} 
+              {% assign temp1 = variant.option1 %}
+              {% if  temp1 == t %}
+                <div class="variant-contents mob-variant-contents">
+                  <div class="variant-row">
+                    <div class="variant-item">
+                      <h2>{{product.title}} {{t}}</h2>
+                    </div>
+                    <div class="variant-item">
+                      <label>Size: </label>
+                      <span class="size">{{ variant.option2 }}</span>
+                    </div>
+                  </div>
+                  <div class="variant-row">
+                    <div class="variant-item">
+                      <div class="variant-row">
+                        <div class="variant-item_price">
+                          {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}
+                          <span class="price">{{ wsprice | money }}</span>
+                        </div>
+                        <div class="variant-item_msrp">
+                          <label>MSRP: </label>
+                          <span class="msrp">${{ variant.metafields.custom_fields["msrp"] }}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="variant-item_number">
+                      <div class="qty-wrapper">
+                        <div class="qty-right">
+                      <button class="uparrow qtyplus"  field='updates_{{ variant.id }}' >+</button>
+                      <div class="span-absolute"></div>
+                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}data-max="{{ variant.inventory_quantity }}"{% endif %} data-price="{{ wsprice | money }}" type="text" name="updates[]" field='{{ variant.id }}'  id="updates_{{ variant.id }}" class="stickyquantity" value="0"  />
+                      <button class="downarrow qtyminus"  field='updates_{{ variant.id }}'>-</button>
+                    </div>
+                      </div>
+                      {%if variant.metafields.custom_fields["warning_symbol"] == 1 %}                      
+                      <div class="exclamation-mark">
+                        <img src="{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}">
+                      </div>
+                      {%endif%}
+                      {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}
+                    <div class="">Out of Stock&nbsp;&nbsp;<a class="klaviyo-bis-trigger" href="#" style="display:block!important" data="{{ variant.id }}" onclick="setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );">Notify Me</a></div>
+                      {% endif %}
+                    </div>
+                  </div>   
+                </div>
+                {% assign i = i | plus: 1 %}
+
+              {% else %}
+
+              {% endif %}
+
+            {%endfor%}
+		  </div>
+      </div>      
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Paints Variant List",
+    "settings": [],
+     "presets": [
+    {
+      "name": "Paints Variant List"
+    }
+     ]
+  }       
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

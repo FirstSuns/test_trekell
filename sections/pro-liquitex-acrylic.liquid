@@ -1,0 +1,109 @@
+<div class="product_table"><div class="page-width page-width collection-product-list product-variant-list ">
+  <div class="grid grid--uniform grid--uniform-row-gutters large-row">
+    <div id="{{t | handleize}}" class="product-item grid__item">
+      <div class="product-variant-section grid__item">
+        <table class="variant-table  table--maxwidth">
+          <thead>
+            <tr>
+              <td>Color</td>
+            <td>MSRP</td>
+            <td>Price</td>
+            <td></td>
+            <td class="quantity-head">Quantity</td> 
+            </tr>
+          </thead>
+          <tbody>     
+            {% for variant in product.variants %} 
+            <tr id="{{ variant.id }}"> 
+              <td class="variant-color" style="background-color:{{ variant.metafields.custom_fields["variant_color"] }};color:{{ variant.metafields.custom_fields["variant_text_color"] }};">{{variant.option1}}</td>
+            <td>{%if variant.metafields.custom_fields["msrp"] != blank %}${{ variant.metafields.custom_fields["msrp"] }}{%endif%}</td>
+              {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}
+              <td>{{ wsprice | money }}</td>
+              <td>
+                <!-- Wishlist Hero Button -->
+              {% assign productNameSuffix = variant.options | join: " / " | prepend: " : "  %}
+              {% include 'wishlisthero-collection-product' with product: product, forceSelectedVariant: variant, productNameSuffix: productNameSuffix , buttonClass: "wishlisthero-button-in-product-table"  %}
+              <!--/ Wishlist Hero Button -->
+              </td>
+              <td class="yellow-mark">
+             {%comment%}
+              <div class="qty-wrapper">
+                <div class="qty-left">
+                  <div class="span-absolute"></div>
+                  <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %} data-max="{{ variant.inventory_quantity }}"{% endif %} data-price="{{ wsprice | money }}" type="text" name="updates[]" field='{{ variant.id }}'  id="updates_{{ variant.id }}" class="stickyquantity" value="0"  />
+                </div>
+                <div class="qty-right">
+                  <button class="uparrow qtyplus"  field='updates_{{ variant.id }}' >+</button>
+                  <button class="downarrow qtyminus"  field='updates_{{ variant.id }}'>-</button>
+                </div>
+              </div> 
+              {%endcomment%}
+                                
+        {%include 'quantity-selector' %} 
+                {%if variant.metafields.custom_fields["warning_symbol"] == 1 %}                      
+              <div class="exclamation-mark">
+                <img src="{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}">
+              </div>
+              {%endif%}
+                {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}
+               <div class="out-stock">Out of Stock&nbsp;&nbsp;<a class="klaviyo-bis-trigger" href="#" style="display:block!important" data="{{ variant.id }}" onclick="setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );">Notify Me</a></div> 
+             {% endif %}
+              </td>
+            </tr> 
+
+            {%endfor%} 
+
+          </tbody>
+        </table>         
+
+        <div class="table-for-mobile mobile-variant-table">  
+        {% for variant in product.variants %}
+        <div class="mobile-varient-inner mob-variant-contents">
+          <div class="color" style="background-color:{{ variant.metafields.custom_fields["variant_color"] }};color:{{ variant.metafields.custom_fields["variant_text_color"] }};">
+            {{variant.option1}}
+          </div>
+          <div class="price-wrap">
+            {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}
+            <span class="price">{{ wsprice | money }}</span>
+            <span class="msrp">MSRP: ${{ variant.metafields.custom_fields["msrp"] }}</span>
+            <div class="variant-item_number">
+            
+              <div class="qty-wrapper">
+                    <div class="qty-right">
+                      <button class="uparrow qtyplus"  field='updates_{{ variant.id }}' >+</button>
+                      <div class="span-absolute"></div>
+                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}data-max="{{ variant.inventory_quantity }}"{% endif %} data-price="{{ wsprice | money }}" type="text" name="updates[]" field='{{ variant.id }}'  id="updates_{{ variant.id }}" class="stickyquantity" value="0"  />
+                      <button class="downarrow qtyminus"  field='updates_{{ variant.id }}'>-</button>
+                    </div>
+                  </div>           
+              
+              {%if variant.metafields.custom_fields["warning_symbol"] == 1 %}                      
+              <div class="exclamation-mark">
+                <img src="{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}">
+              </div>
+              {%endif%}
+              {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}
+              	<div class="">Out of Stock&nbsp;&nbsp;<a class="klaviyo-bis-trigger" href="#" style="display:block!important" data="{{ variant.id }}" onclick="setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );">Notify Me</a></div>
+           
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Liquitex acrylic",
+    "settings": [],
+     "presets": [
+    {
+      "name": "Liquitex acrylic"
+    }
+     ]
+  }       
+{% endschema %}

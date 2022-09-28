@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "1662446084875160e6": {
+      "type": "slideshow",
+      "blocks": {
+        "16624460843800f1de-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Trekell_affiliate_program.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 50,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "16624460843800f1de-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "1662446084875160e6",
+    "main"
+  ]
+}

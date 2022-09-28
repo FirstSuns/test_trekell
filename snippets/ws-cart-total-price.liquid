@@ -1,0 +1,10 @@
+{% assign cart_total = 0.00 %}
+{% for item in cart.items %}
+    {% capture item_line_price %}{% include 'ws-item-line-price', item: item, money: false %}{% endcapture %}
+    {% capture cart_total %}{{ item_line_price | plus: cart_total }}{% endcapture %}
+{% endfor %}
+{% if money %}
+    {{ cart_total | money }}
+{% else %}
+    {{ cart_total }}
+{% endif %}
