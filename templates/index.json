@@ -19,6 +19,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/EJ_banner_WEBP.webp",
+            "image_mob": "shopify:\/\/shop_images\/s1.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -37,6 +38,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/GOREstoreRESIZEDbanner.webp",
+            "image_mob": "shopify:\/\/shop_images\/s2.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -55,6 +57,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/MabGraves_LE-MiniBrush_WebBanner_A.webp",
+            "image_mob": "shopify:\/\/shop_images\/MabGraves_LE-MiniBrush_MobileBanner_1.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -73,6 +76,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Trekell_WebBanner_huge_paint_sale_e7242ea2-3e2f-4311-b9b2-b68d550e8dea.webp",
+            "image_mob": "shopify:\/\/shop_images\/s4.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -91,6 +95,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/cradled-hardboard-hp-banner_A.webp",
+            "image_mob": "shopify:\/\/shop_images\/s5.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -109,6 +114,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/victor-bs-dt_2.webp",
+            "image_mob": "shopify:\/\/shop_images\/victor-mweb.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -127,6 +133,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/CUSTOM-PANELS-DT_2A_be09157a-ba62-4e9a-afda-aa7eca24f575.webp",
+            "image_mob": "shopify:\/\/shop_images\/CUSTOM-PANEL-MWEB.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -163,6 +170,7 @@
     },
     "166147031462394656": {
       "type": "slideshow",
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "slide_height": "small",

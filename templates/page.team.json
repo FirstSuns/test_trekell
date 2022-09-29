@@ -3,8 +3,8 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 24,
-        "padding_bottom": 4
+        "padding_top": 12,
+        "padding_bottom": 0
       }
     },
     "166181839359f7bdc0": {
@@ -67,7 +67,7 @@
       ],
       "settings": {
         "section_class": "",
-        "section_title": "MEET THE TREKELL PRO TEAM!",
+        "section_title": "",
         "section_title_type": "h2",
         "section_textblock": "",
         "section_width": "regular",

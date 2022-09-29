@@ -64,12 +64,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "b89dfb80-ff7c-48f0-878e-cdb7883dcb62": {
-          "type": "variant-quick-links",
-          "settings": {
-            "type": "eraser"
-          }
         }
       },
       "block_order": [
@@ -82,13 +76,12 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share",
-        "b89dfb80-ff7c-48f0-878e-cdb7883dcb62"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "thumbnail_slider",
-        "media_size": "large",
+        "media_size": "medium",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -138,7 +131,8 @@
         "11b6fe5b-0878-496b-a0e8-2167fd320040"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "custom_class": ""
       }
     },
     "1662357379a239dbb4": {

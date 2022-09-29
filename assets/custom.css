@@ -750,5 +750,19 @@ article.article-template {
      }
 }
 
+.fs_dsk_only{
+    display: block !important;
+}
+.fs_mob_only{
+    display: none !important;
+}
+ @media screen and (max-width: 749px) {
+    .fs_dsk_only{
+        display: none !important;
+    }
+    .fs_mob_only{
+        display: block !important;
+    }
+ }
 
 

@@ -226,3 +226,16 @@
     display: list-item;
   }
 }
+
+.fs_media_img_block {
+  position: relative;
+}
+.fs_media_img_block a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}

@@ -1,0 +1,234 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "16644741557c48c3f5": {
+      "type": "rich-text",
+      "blocks": {
+        "166447415583dfa8f4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Our Mission Statement<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "166447415583dfa8f4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Trekell<\/strong> wants to help you find your flow and tap your potential. In a way, you could say we want to be the glasses for your artistic vision. Everything we do helps support that mission.<\/p>"
+          }
+        },
+        "166447415583dfa8f4-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166447415583dfa8f4-0",
+        "166447415583dfa8f4-1",
+        "166447415583dfa8f4-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "166447426179f4f066": {
+      "type": "image-with-text",
+      "blocks": {
+        "166447426144a01982-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "166447426144a01982-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"I am the worst brush mom. I'm not kidding. The WORST. I do this nifty thing where I paint 16 hours a day (pretty much till I pass out) and then completely forget my poor brushes and leave them sulking in water or with headfulls of paint. Discovering Trekell was a godsend. <br\/><\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/mab-graves\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/mab-graves\"><em>-Mab Graves (Trekell Pro Team Artist)<\/em><\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "166447426144a01982-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "166447426144a01982-0",
+        "166447426144a01982-1",
+        "166447426144a01982-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Mab_Brush_Family_Trekell_Art_Supply.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664474328e230431e": {
+      "type": "rich-text",
+      "blocks": {
+        "1664474328d2319c5c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>We'll bring our experience and reputation to everything we do.<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1664474328d2319c5c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For over 30 years, we've made some of the finest art supplies for artists of all levels. That trust was hard-won. We've done our time at every step of the product line to ensure that what we make meets your needs. It has been that way from the start and is even more critical now. As the world around us changes, that's one thing you can rely on: We're committed to helping you because we're artists too. <\/p>"
+          }
+        },
+        "1664474328d2319c5c-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664474328d2319c5c-0",
+        "1664474328d2319c5c-1",
+        "1664474328d2319c5c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1664474418b4ed38db": {
+      "type": "image-with-text",
+      "blocks": {
+        "16644744181e88501f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "16644744181e88501f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“I started using Trekell’s Golden Taklons a handful of years ago and can say they never disappoint. From well secured ferrules to carefully crafted tips that come to a needle-like tip, I have to say these bad babies have never let me down! From ink and watercolor work, oil paintings and finally to varnishes, Trekell provides beautiful and absolutely reliable tools to get my job done.\" <\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/soey-milk\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/soey-milk\"><em>-Soey Milk (Trekell Pro Team Artist)<\/em><\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "16644744181e88501f-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16644744181e88501f-0",
+        "16644744181e88501f-1",
+        "16644744181e88501f-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Soey_Milk_Trekell_Art_Supply_A.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664474521b54d6d6e": {
+      "type": "rich-text",
+      "blocks": {
+        "1664474521cbf61eac-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>If there's a need in the market, we'll innovate until we fill it.<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1664474521cbf61eac-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We learned early to listen to artists because who knows better what they need than the most creative people on the planet?<br\/><br\/>While our products have an old-school sensibility, prioritizing value, sustainability, and durability, we're refreshingly unmoored from the stodginess endemic in the industry. <br\/><br\/>If it needs fixing, we'll fix it. If it needs breaking, we'll break it. We don't make products for 300-year-old names found in textbooks. <br\/><br\/>We make products for you today. And you can count on us to be there for you tomorrow.<\/p>"
+          }
+        },
+        "1664474521cbf61eac-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664474521cbf61eac-0",
+        "1664474521cbf61eac-1",
+        "1664474521cbf61eac-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16644741557c48c3f5",
+    "166447426179f4f066",
+    "1664474328e230431e",
+    "1664474418b4ed38db",
+    "1664474521b54d6d6e"
+  ]
+}

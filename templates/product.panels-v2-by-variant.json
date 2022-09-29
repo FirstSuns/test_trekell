@@ -39,12 +39,6 @@
           "type": "price",
           "settings": {}
         },
-        "b2e33a61-25fa-44ba-b36b-39025654af8b": {
-          "type": "variant-quick-links",
-          "settings": {
-            "type": "panels2"
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -59,13 +53,12 @@
         "caption",
         "description",
         "price",
-        "b2e33a61-25fa-44ba-b36b-39025654af8b",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "thumbnail_slider",
-        "media_size": "large",
+        "media_size": "medium",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,

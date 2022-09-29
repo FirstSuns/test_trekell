@@ -9,7 +9,7 @@
     #Slider-{{ section.id }}::before,
     #Slider-{{ section.id }} .media::before,
     #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+      padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image_mob.aspect_ratio | times: 100 }}%;
       content: '';
       display: block;
     }
@@ -92,7 +92,7 @@
          <a href="{{ block.settings.link }}">
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">     
           {%- if block.settings.image -%}
-            <img
+            <img class="fs_dsk_only"
               srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
               {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
               {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
@@ -105,10 +105,28 @@
               {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
               sizes="100vw"
               src="{{ block.settings.image | image_url: width: 1500 }}"
-              loading="lazy"
+              loading=""
               alt="{{ block.settings.image.alt | escape }}"
               width="{{ block.settings.image.width }}"
               height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
+            >
+            <img class="fs_mob_only"
+              srcset="{%- if block.settings.image_mob.width >= 375 -%}{{ block.settings.image_mob | image_url: width: 375 }} 375w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 550 -%}{{ block.settings.image_mob | image_url: width: 550 }} 550w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 750 -%}{{ block.settings.image_mob | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 1100 -%}{{ block.settings.image_mob | image_url: width: 1100 }} 1100w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 1500 -%}{{ block.settings.image_mob | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 1780 -%}{{ block.settings.image_mob | image_url: width: 1780 }} 1780w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 2000 -%}{{ block.settings.image_mob | image_url: width: 2000 }} 2000w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 3000 -%}{{ block.settings.image_mob | image_url: width: 3000 }} 3000w,{%- endif -%}
+              {%- if block.settings.image_mob.width >= 3840 -%}{{ block.settings.image_mob | image_url: width: 3840 }} 3840w,{%- endif -%}
+              {{ block.settings.image_mob | image_url }} {{ block.settings.image_mob.width }}w"
+              sizes="100vw"
+              src="{{ block.settings.image_mob | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ block.settings.image_mob.alt | escape }}"
+              width="{{ block.settings.image_mob.width }}"
+              height="{{ block.settings.image_mob.width | divided_by: block.settings.image_mob.aspect_ratio | round }}"
             >
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -306,6 +324,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mob",
+          "label": "Mobile Image"
         },
         {
           "type": "text",

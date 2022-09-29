@@ -64,12 +64,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "7b532cfc-d155-4fb0-99f7-e359eeda02c5": {
-          "type": "variant-quick-links",
-          "settings": {
-            "type": "Gamblin1980"
-          }
         }
       },
       "block_order": [
@@ -82,13 +76,12 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "share",
-        "7b532cfc-d155-4fb0-99f7-e359eeda02c5"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "thumbnail_slider",
-        "media_size": "large",
+        "media_size": "medium",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
