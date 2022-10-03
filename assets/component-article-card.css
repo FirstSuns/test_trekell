@@ -140,3 +140,18 @@
     }
   }
 }
+
+
+.fs-article-tags{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+}
+.fs-article-tag{
+  background: #0396A6;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-size: 15px;
+}

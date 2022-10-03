@@ -1,14 +1,410 @@
 {
   "sections": {
+    "16644776485e39d4ef": {
+      "type": "rich-text",
+      "blocks": {
+        "166447764884517901-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>BRAND PROMISE <\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "166447764884517901-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Beyond the Brush.<\/strong><\/p><p>Trekell promises to go beyond the brush and be the best for you. And, in the same way we make and design many versatile art supply products, that promise means many things.<\/p>"
+          }
+        },
+        "166447764884517901-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166447764884517901-0",
+        "166447764884517901-1",
+        "166447764884517901-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "1664477925ac81b9f3": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664477925bfed8c26-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1664477925bfed8c26-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"Trekell brushes provide the artist with the highest quality brushes<br\/> at affordable prices. A rare combination in artist materials. A great  brush collection for the serious artists.\" <\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/tony-curanaj\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/tony-curanaj\"><em>-Tony Curanaj (Trekell Pro Team Artist)<\/em><\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1664477925bfed8c26-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664477925bfed8c26-0",
+        "1664477925bfed8c26-1",
+        "1664477925bfed8c26-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Tony_Curanaj_Trekell_Pro_Team_Artist.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16644781904dc3dca3": {
+      "type": "rich-text",
+      "blocks": {
+        "1664478190007ff429-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We'll<strong> <\/strong>go beyond industry standards. <\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1664478190007ff429-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because of our by-artists-for-artists insight, we painstakingly design products to meet a lofty commitment to high quality: our own. If they don't meet your standards, we want to hear about it because that means they don't meet ours.<\/p>"
+          }
+        },
+        "1664478190007ff429-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664478190007ff429-0",
+        "1664478190007ff429-1",
+        "1664478190007ff429-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "166447825740bb0715": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664478257b23f703f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1664478257b23f703f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“Trekell supplies are my go-to, since making professional-quality work requires professional-quality art supplies. <br\/><br\/>I need brushes that work as hard as I do, and archival surfaces that are built to last. <br\/><br\/>Perfectly-shaped geometric panels and brushes that hold their shape make a huge  difference in my workflow, and in the sharpness and quality of my finished paintings. \" <\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/hannah-webb-the-obanoth\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/hannah-webb-the-obanoth\"><em>-<\/em>Hannah Webb – The Obanoth (Trekell Pro Team Artist)<\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1664478257b23f703f-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664478257b23f703f-0",
+        "1664478257b23f703f-1",
+        "1664478257b23f703f-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1_theobanoth_01.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664478485099b7981": {
+      "type": "rich-text",
+      "blocks": {
+        "16644784847c96ab52-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We'll go beyond the sales pitches and corporate doublespeak.<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "16644784847c96ab52-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We promise you'll know what you're buying and why it's right for you. You should have the info you need upfront to make informed purchases. As our Pro-Team knows, Trekell feels more like a family. You deserve to be treated like an artist. You're one of us.<\/p>"
+          }
+        },
+        "16644784847c96ab52-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "16644784847c96ab52-0",
+        "16644784847c96ab52-1",
+        "16644784847c96ab52-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1664478572c4422dcc": {
+      "type": "image-with-text",
+      "blocks": {
+        "16644785724c271cac-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "16644785724c271cac-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“I began using Trekell brushes many years ago and haven't looked back. At first it was because the price made them very affordable but the more I used them, the more I loved how they worked. <br\/><br\/>I soon became attached to the Golden Taklons, which are what my sets are composed of, and I knew I could depend on them for the effects I desired when painting. <br\/><br\/>It has been an honor working with Trekell over the years and watching the company grow and I am honored to have a small part in what the company is doing.\" -<\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/greg-craola-simkins\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/greg-craola-simkins\"><em>Greg \"Craola\" Simkins (Trekell Pro Team Artist)<\/em><\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "16644785724c271cac-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16644785724c271cac-0",
+        "16644785724c271cac-1",
+        "16644785724c271cac-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Greg_Simkins_2.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "166447882972d208e3": {
+      "type": "rich-text",
+      "blocks": {
+        "1664478829a1a3fde8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We'll go beyond the art supply stagnation. <\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1664478829a1a3fde8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We promise to listen to you and recognize emerging trends. We want to make the best products right when you want them, or even before you know that you need them.<\/p>"
+          }
+        },
+        "1664478829a1a3fde8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664478829a1a3fde8-0",
+        "1664478829a1a3fde8-1",
+        "1664478829a1a3fde8-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1664479384b57924ef": {
+      "type": "image-with-text",
+      "blocks": {
+        "1664479384be8be8e1-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "1664479384be8be8e1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“I first tried out Trekell when they first were gracious enough to help sponsor the workshop I was teaching with Sentient Academy. <br\/><br\/>Upon picking up and trying out their brushes I never looked back. I have been switching between different brush types throughout my painting journey and Trekell’s Opal and Legion (my go to brush types) offer the perfect handling and flexibility in its performance. <\/em><\/p><p><em>I am at full confidence when I have their brushes in my hand before the start of a new painting and since starting to use them exclusively, it truly enhanced the efficiency of my artistic process. <br\/><br\/>Their panels are also magic, I’ve yet to come across a linen that could match the high quality buttery smoothness I felt when I used their Oil primed Linen on ACM. I am very excited and beyond honored to join them on their journey as a part of their Pro Team.\" <\/em><a href=\"https:\/\/www.trekell.com\/blogs\/pro-team\/kai-lun-qu\" target=\"_blank\" title=\"https:\/\/www.trekell.com\/blogs\/pro-team\/kai-lun-qu\"><em>-Kai Lun Qu (Trekell Pro Team Artist)<\/em><\/a><\/p>",
+            "text_style": "body"
+          }
+        },
+        "1664479384be8be8e1-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1664479384be8be8e1-0",
+        "1664479384be8be8e1-1",
+        "1664479384be8be8e1-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Kai_Lun_Qu.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1664479610c41ea4fa": {
+      "type": "rich-text",
+      "blocks": {
+        "1664479610787e401b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>These are only some of the things that drive Trekell:<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "1664479610787e401b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quality, honesty, value, and innovation. But, most of all, it's this all-encompassing desire to go beyond. Because when we go beyond the brush, we find you. <\/p>"
+          }
+        },
+        "1664479610787e401b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1664479610787e401b-0",
+        "1664479610787e401b-1",
+        "1664479610787e401b-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "16644776485e39d4ef",
+    "main",
+    "1664477925ac81b9f3",
+    "16644781904dc3dca3",
+    "166447825740bb0715",
+    "1664478485099b7981",
+    "1664478572c4422dcc",
+    "166447882972d208e3",
+    "1664479384b57924ef",
+    "1664479610c41ea4fa"
   ]
 }

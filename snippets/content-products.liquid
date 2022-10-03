@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- assign products_html = '' %}
+{%- assign split_content = content | split: '"' -%}
+{%- assign products_output_count = 0 %}
+{%- assign lazyload_after = lazyload_after | default: 10 -%}
+
+{%- for chunk in split_content -%}
+  {%- if forloop.first -%}
+    {%- assign all_product_handles = product_handle | split: ' ' -%}
+  {%- endif -%}
+  {%- if chunk contains '/products/' -%}
+    {%- assign chunk_handle = chunk | split: '/' | last | split: '?' | first -%}
+    {%- unless all_product_handles contains chunk_handle -%}
+      {%- if products_output_count >= lazyload_after -%}
+        {%- capture products_html -%}
+          {{- products_html -}}
+          <div class="product-block grid__item one-third small-down--one-half" data-lazy-product-handle="{{ chunk_handle }}"></div>
+        {%- endcapture -%}
+      {%- else -%}
+        {%- assign product = all_products[chunk_handle] -%}
+        {%- if product != blank -%}
+            {%- capture products_html -%}
+              {{- products_html -}}
+              {% comment %} {%- include 'product-block', grid_class: 'grid__item one-third small-down--one-half' -%} {% endcomment %}
+              <li class="grid__item">
+              {%- render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'adapt'
+              -%}
+              </li>
+            {%- endcapture -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- assign products_output_count = products_output_count | plus: 1 %}
+    {%- endunless -%}
+  {%- endif -%}
+  {%- assign add_product_handle = chunk_handle | split: ' ' -%}
+  {%- assign all_product_handles = all_product_handles | concat: add_product_handle -%}
+{%- endfor -%}
+
+{% unless products_html == blank %}
+  <div class=" gradient">
+    <product-recommendations class="product-recommendations page-width isolate">
+      <h2 class="product-recommendations__heading">shop this blog</h2>
+      <ul class="grid product-grid grid--3-col-desktop grid--2-col-tablet-down" role="list">
+        {{ products_html }}
+      </ul>
+    </product-recommendations>
+  </div>
+{% endunless %}

@@ -59,7 +59,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           <div class="article-template__content page-width page-width--narrow rte" {% if disabled_by_yoast_seo %}itemprop="articleBody"{% endif %} {{ block.shopify_attributes }}>
               {{ article.content }}
           </div>
-
+          <div class="fs-art-rel-block">
+            {% include 'content-products', content: article.content %}
+          </div>
         {%- when 'share' -%}
       <div class="social-sharing">
   <a class="sharing-link" target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}">

@@ -65,14 +65,18 @@
 <div id="CollectionProductGrid">
   <div class="boost-pfs-filter-wrapper collection page-width">
     <div class="boost-pfs-container-default-box">
-      <div class="boost-pfs-filter-left-col">
+      {% assign hide_filter = false %}
+      {% if collection.handle == "paper" or collection.handle == "pencils-and-erasers" or collection.handle == "art-varnish-art-resin" or collection.handle == "art-palettes" or collection.handle == "halloween-gore-store" %}
+        {% assign hide_filter = true %}
+      {% endif %}
+      <div class="boost-pfs-filter-left-col" style=" {% if hide_filter == true %} display: none; {% endif %}">
         <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v">
           {%- unless enable_filter_tree_button_desktop_v -%}
             {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
           {%- endunless -%}
         </div>
       </div>
-      <div class="boost-pfs-filter-right-col">
+      <div class="boost-pfs-filter-right-col" style=" {% if hide_filter == true %} width: 100%; {% endif %}">
         <div class="product-grid negative-margin">
           <ul id="main-collection-product-grid" data-id="{{ section.id }}" class="
             boost-pfs-filter-products

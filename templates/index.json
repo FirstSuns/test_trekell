@@ -15,6 +15,25 @@
     "1661466663ea0d08c8": {
       "type": "slideshow",
       "blocks": {
+        "f77e2a61-c101-40b5-af39-6f0889b274f3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GOTHbanner_copy.webp",
+            "image_mob": "shopify:\/\/shop_images\/GOTH_MOBILE_AND_EMAIL_v1_copy.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https:\/\/www.trekell.com\/collections\/gothic-panels-1",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "cf55cbd1-f054-4a0c-8fa2-a488f65815c3": {
           "type": "slide",
           "settings": {
@@ -37,8 +56,8 @@
         "60469320-69df-4c9c-8db4-4dd0c248e5b1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/GOREstoreRESIZEDbanner.webp",
-            "image_mob": "shopify:\/\/shop_images\/s2.jpg",
+            "image": "shopify:\/\/shop_images\/Trekell_Halloween_Artist_Canvas_Wooden_Boards_Art_Supplies.webp",
+            "image_mob": "shopify:\/\/shop_images\/Trekell_Halloween_Artist_Canvas_Wooden_Boards_Art_MobileSupplies.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -71,92 +90,13 @@
             "color_scheme": "inverse",
             "text_alignment_mobile": "center"
           }
-        },
-        "166146666335107adc-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Trekell_WebBanner_huge_paint_sale_e7242ea2-3e2f-4311-b9b2-b68d550e8dea.webp",
-            "image_mob": "shopify:\/\/shop_images\/s4.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "https:\/\/www.trekell.com\/collections\/paint-mediums",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "372c64b6-a4da-4304-bb3d-006fd5f0e3cc": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cradled-hardboard-hp-banner_A.webp",
-            "image_mob": "shopify:\/\/shop_images\/s5.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/collections\/hardboard-panels",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "9036f2ee-ac79-4ffe-91a1-297f76f79b48": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/victor-bs-dt_2.webp",
-            "image_mob": "shopify:\/\/shop_images\/victor-mweb.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/products\/victor-roman-celestial-brush-set",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "cef75a57-5d88-477d-b739-5774a74e33a7": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/CUSTOM-PANELS-DT_2A_be09157a-ba62-4e9a-afda-aa7eca24f575.webp",
-            "image_mob": "shopify:\/\/shop_images\/CUSTOM-PANEL-MWEB.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "shopify:\/\/pages\/custom-panel-inquiries",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
+        "f77e2a61-c101-40b5-af39-6f0889b274f3",
         "cf55cbd1-f054-4a0c-8fa2-a488f65815c3",
         "60469320-69df-4c9c-8db4-4dd0c248e5b1",
-        "166146666335107adc-0",
-        "166146666335107adc-1",
-        "372c64b6-a4da-4304-bb3d-006fd5f0e3cc",
-        "9036f2ee-ac79-4ffe-91a1-297f76f79b48",
-        "cef75a57-5d88-477d-b739-5774a74e33a7"
+        "166146666335107adc-0"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -224,7 +164,7 @@
         "1663956203e1054231-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ERICJemailbanner.jpg",
+            "image": "shopify:\/\/shop_images\/E93610F1-C177-4480-9E8E-7696A42D0A00_a5b2920b-0530-4676-8aae-d952e7898754.webp",
             "title": "",
             "text": "",
             "link_label": "Sign Up Now",
@@ -286,7 +226,7 @@
         "1661551625fe6ca012-0": {
           "type": "heading",
           "settings": {
-            "heading": "Join The Trekell Family Become An Affiliate Partner!",
+            "heading": "Join The Trekell Family And Become An Affiliate Partner!",
             "heading_size": "h1"
           }
         },
@@ -334,14 +274,14 @@
         "1661471458e9341e51-0": {
           "type": "heading",
           "settings": {
-            "heading": "Onyx Brushes",
+            "heading": "Protégé Brushes",
             "heading_size": "h1"
           }
         },
         "1661471458e9341e51-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Like Trekell’s other synthetic brushes, an <a href=\"https:\/\/www.trekell.com\/collections\/brushes\/products\/onyx-synthetic-squirrel\" target=\"_blank\">Onyx<\/a> truly mimics the feel of a natural hair brush. An Onyx brush will soak up what you need and paint exactly what you want.<\/p>",
+            "text": "<p>Trekell’s Protégé line is an ingeniously engineered, synthetic alternative to Kolinsky sable-hair -  a classic brush filament known for its retention and performance properties.<\/p>",
             "text_style": "body"
           }
         },
@@ -349,7 +289,7 @@
           "type": "button",
           "settings": {
             "button_label": "LEARN MORE",
-            "button_link": "https:\/\/www.trekell.com\/blogs\/experience\/onyx-brushes"
+            "button_link": "https:\/\/www.trekell.com\/blogs\/experience\/protege-brushes"
           }
         }
       },
@@ -359,7 +299,7 @@
         "1661471458e9341e51-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Onyx_Brushes.webp",
+        "image": "shopify:\/\/shop_images\/Mees_Lifestyle2.webp",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",

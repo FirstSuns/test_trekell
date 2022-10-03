@@ -1,3 +1,21 @@
+$(document).ready(function(){
+  // product description read more by height
+  $('.fs-readmore-btn').click(function (event) {
+    event.preventDefault();
+    var description = document.querySelector('.fs-product-description');
+    console.log(description.style.height)
+    if (description.style.height === ''){
+      description.style.height = 'auto';
+    } else if (description.style.height === 'auto'){
+      description.style.height = '';
+    } else{
+      description.style.height = '92px';
+    }
+
+    $(this).text($(this).text() == 'READ LESS' ? 'READ MORE' : 'READ LESS');
+  });
+});
+
 (function($) {
     'use strict';
        $(".product-detail__detail .readmore").click(function(e) {  
@@ -410,10 +428,7 @@ $(document).ready(function(){
     }
   }
   changeQuantity.init();
-
-  
-  
-  
 });
+
 
 

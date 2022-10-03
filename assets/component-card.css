@@ -51,6 +51,7 @@
 .card--card .card__inner .card__media {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: #fff;
 }
 
 .card--standard.card--text {

@@ -1183,3 +1183,16 @@ a.product__text {
   margin-left: 1.2rem;
   flex-shrink: 0;
 }
+
+.fs-product-description {
+  height:190px;
+  overflow: hidden;
+}
+.fs-readmore-btn {
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 30px;
+  display: block;
+  color: #0396A6 !important;
+}
