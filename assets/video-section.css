@@ -2,6 +2,13 @@
   position: relative;
   padding-bottom: 56.25%;
 }
+@media screen and (min-width: 750px) {
+  .fs-video-section__media {
+    max-width: 797px;
+    margin: auto;
+    padding-bottom: 39.336261% !important;
+  }
+}
 
 .video-section__media.deferred-media {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));

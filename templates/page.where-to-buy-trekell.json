@@ -1,14 +1,74 @@
 {
   "sections": {
+    "1664826618a608097c": {
+      "type": "image-banner",
+      "blocks": {
+        "166482661831ee7e02-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "166482661831ee7e02-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "166482661831ee7e02-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "166482661831ee7e02-0",
+        "166482661831ee7e02-1",
+        "166482661831ee7e02-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/wheretobuy_new.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "Wheretobuy": {
+      "type": "page-where-to-buy-template",
+      "settings": {
+        "page_banner": "shopify:\/\/shop_images\/wheretobuy_new.jpg"
+      }
     }
   },
   "order": [
-    "main"
+    "1664826618a608097c",
+    "main",
+    "Wheretobuy"
   ]
 }
