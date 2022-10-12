@@ -15,6 +15,44 @@
     "1661466663ea0d08c8": {
       "type": "slideshow",
       "blocks": {
+        "9f0e99eb-b104-41c7-9397-ade07ed7ac92": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Julie_Beck_Oil_Brushes_Trekell_website_banner_1.webp",
+            "image_mob": "shopify:\/\/shop_images\/Julie_Beck_Oil_Brushes_Trekell_MOBILE.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https:\/\/www.trekell.com\/collections\/all\/products\/julie-beck-limited-edition-brush-set",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "a9b75da3-197a-4808-b370-a995fad3c793": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trekell_coffee_cup_panel_danica_sills.webp",
+            "image_mob": "shopify:\/\/shop_images\/coffee_cup_panel_trekell_art_email_mobilev1.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https:\/\/www.trekell.com\/products\/coffee-cup-panel",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "f77e2a61-c101-40b5-af39-6f0889b274f3": {
           "type": "slide",
           "settings": {
@@ -93,6 +131,8 @@
         }
       },
       "block_order": [
+        "9f0e99eb-b104-41c7-9397-ade07ed7ac92",
+        "a9b75da3-197a-4808-b370-a995fad3c793",
         "f77e2a61-c101-40b5-af39-6f0889b274f3",
         "cf55cbd1-f054-4a0c-8fa2-a488f65815c3",
         "60469320-69df-4c9c-8db4-4dd0c248e5b1",
@@ -148,11 +188,26 @@
         "padding_bottom": 36
       }
     },
+    "16648390836a45d2f6": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "cover_image": "shopify:\/\/shop_images\/ss_1.jpg",
+        "video_url": "https:\/\/youtu.be\/w4wI0s6eHEA",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
     "16639562035cf18479": {
       "type": "multicolumn",
       "blocks": {
         "1663956203e1054231-0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Pet_portrait_competition_2022.webp",
             "title": "",
@@ -163,6 +218,7 @@
         },
         "1663956203e1054231-2": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/E93610F1-C177-4480-9E8E-7696A42D0A00_a5b2920b-0530-4676-8aae-d952e7898754.webp",
             "title": "",
@@ -454,6 +510,7 @@
     "1661466663ea0d08c8",
     "166147031462394656",
     "featured_collection",
+    "16648390836a45d2f6",
     "16639562035cf18479",
     "166147048026e03e3c",
     "1661551625cc495d5b",

@@ -21,7 +21,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 <title>{{ page_title }}</title>
 {%- comment -%} End Yoast auto-disable. {%- endcomment -%}
 {%- endif -%}
-
+    {% render 'treedify' %}
     {{ content_for_header }}
 
     {{ checkout_stylesheets }}
@@ -64,7 +64,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         </aside>
       </div>
     </div>
-
+ <script> Shopify = window.Shopify || {}; Shopify.shop = Shopify.shop || 'trekell.myshopify.com'; (function (doc) { if (window.location.href.indexOf('checkouts') == -1) { return; } var sc, node; sc = doc.createElement("script"); sc.type = "text/javascript"; sc.async = !0; sc.src = '/apps/sap/fe/loader_2.js?shop=trekell.myshopify.com'; node = doc.getElementsByTagName("script")[0]; node.parentNode.insertBefore(sc, node); })(document); </script> 
     {{ tracking_code }}
   </body>
 </html>

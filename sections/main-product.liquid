@@ -41,6 +41,10 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
 
+  {% assign product_quantity = 0 %}
+  {% for variant in product.variants %}
+    {% assign product_quantity = product_quantity | plus: variant.inventory_quantity %}
+  {% endfor %}
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
@@ -297,6 +301,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
                     name="quantity"
                     id="Quantity-{{ section.id }}"
                     min="1"
+                    {% if product_quantity > 0 %}
+                    max="{{product_quantity}}"
+                    {% endif %}
                     value="1"
                     form="{{ product_form_id }}"
                   >
@@ -427,6 +434,9 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
+                {% if product_quantity > 0 %}
+                {% comment %} <p> Number of available units : {{ product_quantity }} </p> {% endcomment %}
+                {% endif %}
                 <div class="product-form__error-message-wrapper" role="alert" hidden>
                   <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
                     <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
