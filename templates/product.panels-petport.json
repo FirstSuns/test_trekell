@@ -15,20 +15,13 @@
           "type": "title",
           "settings": {}
         },
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd": {
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": true,
             "sku_tagtype": "sku",
             "is_featured_product": false,
             "featured_product_handle": ""
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
           }
         },
         "description": {
@@ -38,18 +31,40 @@
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": true
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd",
-        "caption",
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b",
         "description",
-        "price"
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
+        "media_position": "left",
         "gallery_layout": "thumbnail_slider",
         "media_size": "medium",
         "mobile_thumbnails": "hide",
@@ -59,13 +74,48 @@
         "padding_bottom": 12
       }
     },
-    "1662357379a239dbb4": {
-      "type": "custom-liquid",
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Hassle-Free Exchanges",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"product_table\"><div class=\"page-width page-width collection-product-list product-variant-list\">\n  <div class=\"grid grid--uniform grid--uniform-row-gutters large-row\">\n    <div id=\"{{t | handleize}}\" class=\"product-item grid__item\">\n      <div class=\"product-variant-section grid__item\">\n        <table class=\"variant-table  table--maxwidth\">\n          <thead>\n            <tr>\n              <th>Description<\/th>\n              <th>Size<\/th>       \n              <th>Profile<\/th>\n              <th>Price<\/th>\n              <th><\/th>\n              <th>Quantity<\/th>\n            <\/tr>\n          <\/thead>\n          <tbody>\t\t\t\n            {% for variant in product.variants %} \n            <tr id=\"{{ variant.id }}\"> \n              <td>{{ variant.metafields.custom_fields[\"variant_description\"] }}<\/td>\n              <td>{{variant.option1}}<\/td>                    \n              <td>{{ variant.metafields.custom_fields[\"profile\"] }}<\/td>\n              {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}\n              <td>{{ wsprice | money }}<\/td>\n              <td>\n                <!-- Wishlist Hero Button -->\n              {% assign productNameSuffix = variant.options | join: \" \/ \" | prepend: \" : \"  %}\n              {% include 'wishlisthero-collection-product' with product: product, forceSelectedVariant: variant, productNameSuffix: productNameSuffix , buttonClass: \"wishlisthero-button-in-product-table\"  %}\n              <!--\/ Wishlist Hero Button -->\n              <\/td>\n              <td {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %} class=\"yellow-mark\"{%endif%}>\n               \n                  {%comment%}\n                  <div class=\"qty-wrapper\">\n                    <div class=\"qty-left\">\n                      <div class=\"span-absolute\"><\/div>\n                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %} data-max=\"{{ variant.inventory_quantity }}\"{% endif %} data-price=\"{{ wsprice | money }}\" type=\"text\" name=\"updates[]\" field='{{ variant.id }}'  id=\"updates_{{ variant.id }}\" class=\"stickyquantity\" value=\"0\"  \/>\n                    <\/div>\n                    <div class=\"qty-right\">\n                      <button class=\"uparrow qtyplus\"  field='updates_{{ variant.id }}' >+<\/button>\n                      <button class=\"downarrow qtyminus\"  field='updates_{{ variant.id }}'>-<\/button>\n                    <\/div>\n                  <\/div>\n                  {%endcomment%}\n                  \n                  \n\t\t\t\t{%include 'quantity-selector' %} \n                  \n                {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %}                      \n                <div class=\"exclamation-mark\">\n                  <img src=\"{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}\">\n                <\/div>\n                {%endif%}\n                {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}\n              \n                <div class=\"\">Out of Stock&nbsp;&nbsp;<a class=\"klaviyo-bis-trigger\" href=\"#\" style=\"display:block!important\" data=\"{{ variant.id }}\" onclick=\"setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );\">Notify Me<\/a><\/div>\n                \n                {% endif %}\n              <\/td>\n            <\/tr> \n            {%endfor%} \n          <\/tbody>\n        <\/table>         \n\n        <div class=\"mobile-variant-table\">\n          {% for variant in product.variants %} \n                <div class=\"variant-contents mob-variant-contents\">\n              <div class=\"variant-row\">\n                <div class=\"variant-item\">\n                  <h4>{{product.title}}<\/h4>\n                  <h2>{{t}}<\/h2>\n                <\/div>\n              <\/div>\t\n              <div class=\"variant-row varient-custom\">\n                <div class=\"variant-item varient_size\">\n                  <label>Finish<\/label>\n                  <span class=\"finish\">{{ variant.option2}}<\/span>\n                <\/div>\n                <div class=\"variant-item varient_width\">\n                  <label>Profile<\/label>\n                  <span class=\"width\">{{ variant.metafields.custom_fields[\"profile\"] }}<\/span>\n                <\/div>\n                <div class=\"variant-item varient_width\">\n                  <label>Size<\/label>\n                  <span class=\"width\">{{ variant.metafields.custom_fields[\"size\"] }}<\/span>\n                <\/div>\n              <!--  <div class=\"variant-item varient_length\">\n                  <label>Length<\/label>\n                  <span class=\"length\">{{ variant.metafields.custom_fields[\"length\"] }}<\/span>\n                <\/div>-->\n           <!--    <\/div>\t\n              <div class=\"variant-row varient-custom\">\n                <div class=\"variant-item varient_msrp\">\n                  <label>MSRP<\/label>\n                  <span class=\"msrp\">${{ variant.metafields.custom_fields[\"msrp\"] }}<\/span>\n                <\/div>-->\n              <\/div>\n              <div class=\"variant-row\">\n                <div class=\"variant-item\">\n                  <div class=\"variant-row\">\n                    <div class=\"variant-item varient_price\">\n                      <label>Price<\/label>\n                           {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}\n         \n                      <span class=\"price\">{{ wsprice | money }}<\/span>\n                    <\/div>\n                  <\/div>\n                <\/div>\n                <div class=\"variant-item_number\">\n                  <div class=\"qty-wrapper\">\n                    <div class=\"qty-right\">\n                      <button class=\"uparrow qtyplus\"  field='updates_{{ variant.id }}' >+<\/button>\n                      <div class=\"span-absolute\"><\/div>\n                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}data-max=\"{{ variant.inventory_quantity }}\"{% endif %} data-price=\"{{ wsprice | money }}\" type=\"text\" name=\"updates[]\" field='{{ variant.id }}'  id=\"updates_{{ variant.id }}\" class=\"stickyquantity\" value=\"0\"  \/>\n                      <button class=\"downarrow qtyminus\"  field='updates_{{ variant.id }}'>-<\/button>\n                    <\/div>\n                  <\/div>\n                  {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %}                      \n                  <div class=\"exclamation-mark\">\n                    <img src=\"{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}\">\n                  <\/div>\n                  {%endif%}\n                  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}\n                 \n                  <div class=\"out-stock\">Out of Stock&nbsp;&nbsp;<a class=\"klaviyo-bis-trigger\" href=\"#\" style=\"display:block!important\" data=\"{{ variant.id }}\" onclick=\"setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );\">Notify Me<\/a><\/div>\n                  \n                 {% endif %}\n                <\/div>\n              <\/div>   \n            <\/div>\n          {%endfor%}\n        <\/div>\n      <\/div>      \n    <\/div>\n  <\/div>\n<\/div><\/div>",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-recommendations": {
@@ -86,10 +136,19 @@
         "padding_bottom": 28
       }
     },
-    "16623566607e892f14": {
+    "01d6276e-1bc1-4ecf-a853-57981ca47656": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"product_table\"><div class=\"page-width page-width collection-product-list product-variant-list\">\n  <div class=\"grid grid--uniform grid--uniform-row-gutters large-row\">\n    <div id=\"{{t | handleize}}\" class=\"product-item grid__item\">\n      <div class=\"product-variant-section grid__item\">\n        <table class=\"variant-table  table--maxwidth\">\n          <thead>\n            <tr>\n              <th>Description<\/th>\n              <th>Size<\/th>       \n              <th>Profile<\/th>\n              <th>Price<\/th>\n              <th><\/th>\n              <th>Quantity<\/th>\n            <\/tr>\n          <\/thead>\n          <tbody>\t\t\t\n            {% for variant in product.variants %} \n            <tr id=\"{{ variant.id }}\"> \n              <td>{{ variant.metafields.custom_fields[\"variant_description\"] }}<\/td>\n              <td>{{variant.option1}}<\/td>                    \n              <td>{{ variant.metafields.custom_fields[\"profile\"] }}<\/td>\n              {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}\n              <td>{{ wsprice | money }}<\/td>\n              <td>\n                <!-- Wishlist Hero Button -->\n              {% assign productNameSuffix = variant.options | join: \" \/ \" | prepend: \" : \"  %}\n              {% include 'wishlisthero-collection-product' with product: product, forceSelectedVariant: variant, productNameSuffix: productNameSuffix , buttonClass: \"wishlisthero-button-in-product-table\"  %}\n              <!--\/ Wishlist Hero Button -->\n              <\/td>\n              <td {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %} class=\"yellow-mark\"{%endif%}>\n               \n                  {%comment%}\n                  <div class=\"qty-wrapper\">\n                    <div class=\"qty-left\">\n                      <div class=\"span-absolute\"><\/div>\n                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %} data-max=\"{{ variant.inventory_quantity }}\"{% endif %} data-price=\"{{ wsprice | money }}\" type=\"text\" name=\"updates[]\" field='{{ variant.id }}'  id=\"updates_{{ variant.id }}\" class=\"stickyquantity\" value=\"0\"  \/>\n                    <\/div>\n                    <div class=\"qty-right\">\n                      <button class=\"uparrow qtyplus\"  field='updates_{{ variant.id }}' >+<\/button>\n                      <button class=\"downarrow qtyminus\"  field='updates_{{ variant.id }}'>-<\/button>\n                    <\/div>\n                  <\/div>\n                  {%endcomment%}\n                  \n                  \n\t\t\t\t{%include 'quantity-selector' %} \n                  \n                {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %}                      \n                <div class=\"exclamation-mark\">\n                  <img src=\"{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}\">\n                <\/div>\n                {%endif%}\n                {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}\n              \n                <div class=\"\">Out of Stock&nbsp;&nbsp;<a class=\"klaviyo-bis-trigger\" href=\"#\" style=\"display:block!important\" data=\"{{ variant.id }}\" onclick=\"setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );\">Notify Me<\/a><\/div>\n                \n                {% endif %}\n              <\/td>\n            <\/tr> \n            {%endfor%} \n          <\/tbody>\n        <\/table>         \n\n        <div class=\"mobile-variant-table\">\n          {% for variant in product.variants %} \n                <div class=\"variant-contents mob-variant-contents\">\n              <div class=\"variant-row\">\n                <div class=\"variant-item\">\n                  <h4>{{product.title}}<\/h4>\n                  <h2>{{t}}<\/h2>\n                <\/div>\n              <\/div>\t\n              <div class=\"variant-row varient-custom\">\n                <div class=\"variant-item varient_size\">\n                  <label>Finish<\/label>\n                  <span class=\"finish\">{{ variant.option2}}<\/span>\n                <\/div>\n                <div class=\"variant-item varient_width\">\n                  <label>Profile<\/label>\n                  <span class=\"width\">{{ variant.metafields.custom_fields[\"profile\"] }}<\/span>\n                <\/div>\n                <div class=\"variant-item varient_width\">\n                  <label>Size<\/label>\n                  <span class=\"width\">{{ variant.metafields.custom_fields[\"size\"] }}<\/span>\n                <\/div>\n              <!--  <div class=\"variant-item varient_length\">\n                  <label>Length<\/label>\n                  <span class=\"length\">{{ variant.metafields.custom_fields[\"length\"] }}<\/span>\n                <\/div>-->\n           <!--    <\/div>\t\n              <div class=\"variant-row varient-custom\">\n                <div class=\"variant-item varient_msrp\">\n                  <label>MSRP<\/label>\n                  <span class=\"msrp\">${{ variant.metafields.custom_fields[\"msrp\"] }}<\/span>\n                <\/div>-->\n              <\/div>\n              <div class=\"variant-row\">\n                <div class=\"variant-item\">\n                  <div class=\"variant-row\">\n                    <div class=\"variant-item varient_price\">\n                      <label>Price<\/label>\n                           {%- capture wsprice -%}{% include 'ws-item-price', item: variant, money: false %}{%- endcapture -%}{%- assign wsprice = wsprice | plus: 0 -%}\n         \n                      <span class=\"price\">{{ wsprice | money }}<\/span>\n                    <\/div>\n                  <\/div>\n                <\/div>\n                <div class=\"variant-item_number\">\n                  <div class=\"qty-wrapper\">\n                    <div class=\"qty-right\">\n                      <button class=\"uparrow qtyplus\"  field='updates_{{ variant.id }}' >+<\/button>\n                      <div class=\"span-absolute\"><\/div>\n                      <input  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}data-max=\"{{ variant.inventory_quantity }}\"{% endif %} data-price=\"{{ wsprice | money }}\" type=\"text\" name=\"updates[]\" field='{{ variant.id }}'  id=\"updates_{{ variant.id }}\" class=\"stickyquantity\" value=\"0\"  \/>\n                      <button class=\"downarrow qtyminus\"  field='updates_{{ variant.id }}'>-<\/button>\n                    <\/div>\n                  <\/div>\n                  {%if variant.metafields.custom_fields[\"warning_symbol\"] == 1 %}                      \n                  <div class=\"exclamation-mark\">\n                    <img src=\"{{ 'Prop_65_Warning_Icon_small.png' | asset_img_url: '18x' }}\">\n                  <\/div>\n                  {%endif%}\n                  {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' and variant.inventory_quantity == 0 %}\n                 \n                  <div class=\"out-stock\">Out of Stock&nbsp;&nbsp;<a class=\"klaviyo-bis-trigger\" href=\"#\" style=\"display:block!important\" data=\"{{ variant.id }}\" onclick=\"setTimeout( function(){ $('#klaviyo-bis-iframe').contents().find('#variants').val({{variant.id}}); $('#klaviyo-bis-iframe').contents().find('#variants').attr('disabled',true);$('#klaviyo-bis-iframe').contents().find('#variants').css({'webkit-appearance':'none','-moz-appearance':'none'});}  , 1000 );\">Notify Me<\/a><\/div>\n                  \n                 {% endif %}\n                <\/div>\n              <\/div>   \n            <\/div>\n          {%endfor%}\n        <\/div>\n      <\/div>      \n    <\/div>\n  <\/div>\n<\/div><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "1665569682db960dc3": {
       "type": "apps",
       "blocks": {
-        "11b6fe5b-0878-496b-a0e8-2167fd320040": {
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
@@ -103,18 +162,18 @@
         }
       },
       "block_order": [
-        "11b6fe5b-0878-496b-a0e8-2167fd320040"
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6"
       ],
       "settings": {
-        "include_margins": true,
-        "custom_class": ""
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "1662357379a239dbb4",
+    "multicolumn",
     "product-recommendations",
-    "16623566607e892f14"
+    "01d6276e-1bc1-4ecf-a853-57981ca47656",
+    "1665569682db960dc3"
   ]
 }

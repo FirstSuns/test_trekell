@@ -63,10 +63,14 @@
     {% if shop.metafields.bc-sf-filter.settings != blank %}
     settings: {{ shop.metafields.bc-sf-filter.settings | strip_html }},
     {% endif %}
-    {% if shop.metafields.pfs-swatch-settings != blank %}
+    {% if shop.metafields.pfs-swatch-settings.type != nil %}
+    swatch_settings: {{ shop.metafields.pfs-swatch-settings.value | json | strip_html }},
+    {% elsif shop.metafields.pfs-swatch-settings != blank %}
     swatch_settings: {{ shop.metafields.pfs-swatch-settings | json | strip_html }},
     {% endif %}
-    {% if shop.metafields.boostpfs-settings.default-sort-order != blank %}
+    {% if shop.metafields.boostpfs-settings.default-sort-order.type != nil %}
+    default_sort_order: {{ shop.metafields.boostpfs-settings.default-sort-order.value | json | strip_html }},
+    {% elsif shop.metafields.boostpfs-settings.default-sort-order != blank %}
     default_sort_order: {{ shop.metafields.boostpfs-settings.default-sort-order | json | strip_html }},
     {% endif %}
   };
@@ -91,7 +95,7 @@
 {%- if boost_pfs_is_initfilter == true -%}
   <script defer src="{{ 'boost-pfs-vendor.js' | asset_url }}"></script>
   <script defer src="{{ 'boost-pfs-core.js' | asset_url }}"></script>
-<script defer src="{{ 'boost-pfs-otp.js' | asset_url }}"></script>
+  <script defer src="{{ 'boost-pfs-otp.js' | asset_url }}"></script>
   <script defer src="{{ 'boost-pfs-filter.js' | asset_url }}"></script>
   <script defer src="{{ 'boost-pfs-instant-search.js' | asset_url }}"></script>
 {%- else -%}

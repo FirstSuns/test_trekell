@@ -15,20 +15,13 @@
           "type": "title",
           "settings": {}
         },
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd": {
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": true,
             "sku_tagtype": "sku",
             "is_featured_product": false,
             "featured_product_handle": ""
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
           }
         },
         "description": {
@@ -57,29 +50,21 @@
           "settings": {
             "show_dynamic_checkout": true
           }
-        },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd",
-        "caption",
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b",
         "description",
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "share"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,
+        "media_position": "left",
         "gallery_layout": "thumbnail_slider",
         "media_size": "medium",
         "mobile_thumbnails": "hide",
@@ -87,6 +72,50 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Hassle-Free Exchanges",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-recommendations": {
@@ -107,23 +136,23 @@
         "padding_bottom": 28
       }
     },
-    "1662443380846fd21c": {
+    "51727e58-f8f4-4a31-a1f2-f41620465b97": {
       "type": "pencil2-variant-list",
       "settings": {}
     },
-    "1662443170906cbf35": {
+    "01d6276e-1bc1-4ecf-a853-57981ca47656": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<noscript class=\"endOfLayoutContentX\" type=\"text\/mark\"><\/noscript>{% render 'treedify_script' %}",
         "color_scheme": "background-1",
-        "padding_top": 0,
+        "padding_top": 16,
         "padding_bottom": 0
       }
     },
-    "16623566607e892f14": {
+    "1665569682db960dc3": {
       "type": "apps",
       "blocks": {
-        "11b6fe5b-0878-496b-a0e8-2167fd320040": {
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
@@ -137,30 +166,19 @@
         }
       },
       "block_order": [
-        "11b6fe5b-0878-496b-a0e8-2167fd320040"
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6"
       ],
       "settings": {
-        "include_margins": true,
-        "custom_class": ""
-      }
-    },
-    "1662357379a239dbb4": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<div class=\"sticky-add-cart\">\n  <div class=\"page-width-full\">\n    <div class=\"sticky-container\">\n      <div class=\"sticky-collection-title\">\n          <h3>{{product.title}}<\/h3>\n      <\/div>\n      <div class=\"button-section\">\n        <div class=\"sticky-detail\">\n          <input type=\"text\" value=\"0 items\" name=\"TotalQuantity\" id=\"stickyQuantity\"\/>\n          <p id=\"stickyTotalPrice\">$0<\/p>\n        <\/div>\n        \n        <input type=\"submit\" id=\"stickyAddtoCart\" value=\"Add to cart\"\/>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
+    "multicolumn",
     "product-recommendations",
-    "1662443380846fd21c",
-    "1662443170906cbf35",
-    "16623566607e892f14",
-    "1662357379a239dbb4"
+    "51727e58-f8f4-4a31-a1f2-f41620465b97",
+    "01d6276e-1bc1-4ecf-a853-57981ca47656",
+    "1665569682db960dc3"
   ]
 }

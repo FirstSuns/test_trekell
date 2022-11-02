@@ -1,9 +1,17 @@
 {
   "sections": {
-    "1664829592e5fddae6": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "30605bb9-e435-4ea4-86b8-e26a1f74806a": {
       "type": "image-banner",
       "blocks": {
-        "1664829592a98b28ca-0": {
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-0": {
           "type": "heading",
           "disabled": true,
           "settings": {
@@ -11,7 +19,7 @@
             "heading_size": "h1"
           }
         },
-        "1664829592a98b28ca-1": {
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-1": {
           "type": "text",
           "disabled": true,
           "settings": {
@@ -19,7 +27,7 @@
             "text_style": "body"
           }
         },
-        "1664829592a98b28ca-2": {
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-2": {
           "type": "buttons",
           "disabled": true,
           "settings": {
@@ -33,9 +41,9 @@
         }
       },
       "block_order": [
-        "1664829592a98b28ca-0",
-        "1664829592a98b28ca-1",
-        "1664829592a98b28ca-2"
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-0",
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-1",
+        "template--15871184142524__30605bb9-e435-4ea4-86b8-e26a1f74806a-1665657493ae734514-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/wheretobuy_new.jpg",
@@ -51,14 +59,6 @@
         "show_text_below": true
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "Wheretobuy": {
       "type": "page-where-to-buy-template",
       "settings": {
@@ -67,8 +67,8 @@
     }
   },
   "order": [
-    "1664829592e5fddae6",
     "main",
+    "30605bb9-e435-4ea4-86b8-e26a1f74806a",
     "Wheretobuy"
   ]
 }

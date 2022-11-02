@@ -6,7 +6,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "",
             "text_style": "uppercase"
           }
         },
@@ -14,20 +14,13 @@
           "type": "title",
           "settings": {}
         },
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd": {
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/star-rating-badge\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "use_metafields": true,
             "sku_tagtype": "sku",
             "is_featured_product": false,
             "featured_product_handle": ""
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
           }
         },
         "price": {
@@ -58,8 +51,7 @@
       "block_order": [
         "vendor",
         "title",
-        "b25693d3-b72e-48e6-9a22-0bd3231373dd",
-        "caption",
+        "48502eb4-956f-4a49-b6e3-72dadc0bf51b",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -139,19 +131,19 @@
         "padding_bottom": 28
       }
     },
-    "1662718250ae2e3466": {
+    "01d6276e-1bc1-4ecf-a853-57981ca47656": {
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<noscript class=\"endOfLayoutContentX\" type=\"text\/mark\"><\/noscript>{% render 'treedify_script' %}",
         "color_scheme": "background-1",
-        "padding_top": 0,
+        "padding_top": 16,
         "padding_bottom": 0
       }
     },
-    "16627182566692717f": {
+    "1665569682db960dc3": {
       "type": "apps",
       "blocks": {
-        "3d06e578-bb90-4896-b41c-17265b8f88cc": {
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6": {
           "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
@@ -165,11 +157,10 @@
         }
       },
       "block_order": [
-        "3d06e578-bb90-4896-b41c-17265b8f88cc"
+        "9c9666e0-2413-4d2f-8420-b75a7605cca6"
       ],
       "settings": {
-        "include_margins": true,
-        "custom_class": ""
+        "include_margins": true
       }
     }
   },
@@ -177,7 +168,7 @@
     "main",
     "multicolumn",
     "product-recommendations",
-    "1662718250ae2e3466",
-    "16627182566692717f"
+    "01d6276e-1bc1-4ecf-a853-57981ca47656",
+    "1665569682db960dc3"
   ]
 }

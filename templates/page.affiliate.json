@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Trekell_affiliate_program.webp",
+            "image_mob": "shopify:\/\/shop_images\/Trekell_affiliate_program.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",

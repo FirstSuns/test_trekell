@@ -50,7 +50,21 @@
   }
 </style>
 
-<div class="template-search spaced-section{% unless search.performed and search.results.size > 0 %} template-search--empty{% endunless %}">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="template-search spaced-section{% unless search.performed and search.results.size > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
   <div class="page-width center">
     <h1 class="boost-pfs-search-result-header h2">{% render 'boost-pfs-filter-skeleton', width: 4 %}</h1>
     <div class="template-search__search">
@@ -95,10 +109,12 @@
             {%- if enable_filter_tree_button_desktop_v -%}
               <div class="boost-pfs-filter-tree-desktop-button">{%- render 'boost-pfs-filter-skeleton', type: 'button' -%}</div>
             {%- endif -%}
+            {%- if section.settings.enable_sorting -%}
             <label class="collection-filters__label" for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-            <div class="boost-pfs-filter-top-sorting">
-              {% render 'boost-pfs-filter-skeleton', width: 2 %}
-            </div>
+              <div class="boost-pfs-filter-top-sorting">
+                {% render 'boost-pfs-filter-skeleton', width: 2 %}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -113,12 +129,12 @@
       <div class="boost-pfs-filter-left-col">
         <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v">
           {%- unless enable_filter_tree_button_desktop_v -%}
-                      {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
-                    {%- endunless -%}
+            {% render 'boost-pfs-filter-skeleton', type: 'filter-tree' %}
+          {%- endunless -%}
         </div>
       </div>
       <div class="boost-pfs-filter-right-col">
-        <div class="boost-pfs-filter-products grid grid--2-col grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max">
+        <ul class="boost-pfs-filter-products grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
           {% comment %} Fix Shopify search term report {% endcomment %}
           {% paginate search.results by 2 %}
             {% if search.performed %}
@@ -127,7 +143,7 @@
               {% endfor %}
             {% endif %}
           {% endpaginate %}
-        </div>
+        </ul>
         <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
         <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
         <div class="boost-pfs-filter-bottom-pagination">
@@ -171,7 +187,9 @@ var boostPFSThemeConfig = {
     selected_or_first_unit_price: {{ 'products.product.price.unit_price' | t | json }},
     unit_price_separator: {{ 'accessibility.unit_price_separator' | t | default: '' | json }},
     star_reviews_info: {{ 'accessibility.star_reviews_info' | t | json }},
-    total_reviews: {{ "accessibility.total_reviews" | t | json }}
+    total_reviews: {{ "accessibility.total_reviews" | t | json }},
+    product_count_simple_one: {{ 'products.facets.product_count_simple.one' | t: count: '' | json }},
+    product_count_simple_other: {{ 'products.facets.product_count_simple.other' | t: count: '' | json }}
   },
   custom: {
     show_vendor: {% if section.settings.show_vendor %} {{ section.settings.show_vendor | json }} {% else %} false {% endif %},
@@ -211,6 +229,8 @@ var boostPFSTemplate = {
 };
 </script>
 {% schema %}
+
+
 
 {
   "name": "t:sections.main-search.name",

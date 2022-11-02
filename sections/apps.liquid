@@ -1,4 +1,4 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %} {{ section.settings.custom_class }}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %}">
   {%- for block in section.blocks -%}
     {% render block %}
   {%- endfor -%}
@@ -15,12 +15,7 @@
       "id": "include_margins",
       "default": true,
       "label": "t:sections.apps.settings.include_margins.label"
-    },
-    {
-          "type": "text",
-          "id": "custom_class",
-          "label": "Class name"
-          }
+    }
   ],
   "blocks": [
     {

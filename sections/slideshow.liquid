@@ -81,6 +81,7 @@
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
       </style>
+      
       <div class="slideshow__slide grid__item grid--1-col slider__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
@@ -89,27 +90,23 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-         <a href="{{ block.settings.link }}">
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">     
+         <a {% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %}>
+        <div class="slideshow__media  banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+         
           {%- if block.settings.image -%}
-            <img class="fs_dsk_only"
-              srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
-              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-              {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
-              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-              {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
-              {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
-              {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
-              {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
-              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-              sizes="100vw"
-              src="{{ block.settings.image | image_url: width: 1500 }}"
-              loading=""
-              alt="{{ block.settings.image.alt | escape }}"
-              width="{{ block.settings.image.width }}"
-              height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
-            >
+            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+            {{ block.settings.image | image_url: width: 3840 | image_tag:
+              loading: '',
+              height: height,
+              sizes: "100vw",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            , class: 'fs_dsk_only'
+            }}
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+
+          {%- if block.settings.image_mob -%}
             <img class="fs_mob_only"
               srcset="{%- if block.settings.image_mob.width >= 375 -%}{{ block.settings.image_mob | image_url: width: 375 }} 375w,{%- endif -%}
               {%- if block.settings.image_mob.width >= 550 -%}{{ block.settings.image_mob | image_url: width: 550 }} 550w,{%- endif -%}
@@ -131,8 +128,8 @@
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
-        </div>
       
+        </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
@@ -143,19 +140,17 @@
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
-      {% comment %}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
                 <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
-      {% endcomment %}
           </div>
         </div>
-      </div>    
-         </a>
-    {%- endfor -%}
+  </a>
+         </div>
   
+    {%- endfor -%}
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
@@ -203,13 +198,7 @@
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-<style>
-  .slideshow__slide a {
-    display: inline;
-    height: 100%;
-    width: 100%;
-}
-</style>
+
 {% schema %}
 {
   "name": "t:sections.slideshow.name",

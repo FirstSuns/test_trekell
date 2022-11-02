@@ -7,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Trekell_Giving_Program.webp",
+            "image_mob": "shopify:\/\/shop_images\/Trekell_Giving_Program.webp",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",

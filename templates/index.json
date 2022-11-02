@@ -12,10 +12,48 @@
         "padding_bottom": 0
       }
     },
-    "1661466663ea0d08c8": {
+    "4ae742e7-9054-47ee-a31d-7be5a78e6eb5": {
       "type": "slideshow",
       "blocks": {
-        "9f0e99eb-b104-41c7-9397-ade07ed7ac92": {
+        "2ddeef3e-48e5-4151-9491-a6477ad514f0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ornate_panels_trekell_art_danica.webp",
+            "image_mob": "shopify:\/\/shop_images\/Ornate_panel_email.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https:\/\/www.trekell.com\/collections\/ornate-panels",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "75c71612-0849-4c23-a26b-975d812a66ab": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ORNAMENT_banner.webp",
+            "image_mob": "shopify:\/\/shop_images\/ORNAMENT_V2_mobile.webp",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https:\/\/www.trekell.com\/products\/raw-round-ornament-panels",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "492125e7-c30f-4c0f-810f-0b82d54bf5c1": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Julie_Beck_Oil_Brushes_Trekell_website_banner_1.webp",
@@ -34,45 +72,7 @@
             "text_alignment_mobile": "center"
           }
         },
-        "a9b75da3-197a-4808-b370-a995fad3c793": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trekell_coffee_cup_panel_danica_sills.webp",
-            "image_mob": "shopify:\/\/shop_images\/coffee_cup_panel_trekell_art_email_mobilev1.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "https:\/\/www.trekell.com\/products\/coffee-cup-panel",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "f77e2a61-c101-40b5-af39-6f0889b274f3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/GOTHbanner_copy.webp",
-            "image_mob": "shopify:\/\/shop_images\/GOTH_MOBILE_AND_EMAIL_v1_copy.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "https:\/\/www.trekell.com\/collections\/gothic-panels-1",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "cf55cbd1-f054-4a0c-8fa2-a488f65815c3": {
+        "9ad7bde9-2e9b-4d80-997c-94eeb97de3a4": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/EJ_banner_WEBP.webp",
@@ -91,26 +91,7 @@
             "text_alignment_mobile": "center"
           }
         },
-        "60469320-69df-4c9c-8db4-4dd0c248e5b1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Trekell_Halloween_Artist_Canvas_Wooden_Boards_Art_Supplies.webp",
-            "image_mob": "shopify:\/\/shop_images\/Trekell_Halloween_Artist_Canvas_Wooden_Boards_Art_MobileSupplies.webp",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "https:\/\/www.trekell.com\/collections\/halloween-gore-store\/",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "166146666335107adc-0": {
+        "ca8ceefd-7fd7-4b17-a9ba-7590d05bb54e": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/MabGraves_LE-MiniBrush_WebBanner_A.webp",
@@ -119,24 +100,23 @@
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "shopify:\/\/products\/mab-graves-pro-team-brush-set",
+            "link": "https:\/\/www.trekell.com\/products\/mab-graves-pro-team-brush-set",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "inverse",
+            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "9f0e99eb-b104-41c7-9397-ade07ed7ac92",
-        "a9b75da3-197a-4808-b370-a995fad3c793",
-        "f77e2a61-c101-40b5-af39-6f0889b274f3",
-        "cf55cbd1-f054-4a0c-8fa2-a488f65815c3",
-        "60469320-69df-4c9c-8db4-4dd0c248e5b1",
-        "166146666335107adc-0"
+        "2ddeef3e-48e5-4151-9491-a6477ad514f0",
+        "75c71612-0849-4c23-a26b-975d812a66ab",
+        "492125e7-c30f-4c0f-810f-0b82d54bf5c1",
+        "9ad7bde9-2e9b-4d80-997c-94eeb97de3a4",
+        "ca8ceefd-7fd7-4b17-a9ba-7590d05bb54e"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -148,20 +128,7 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "166147031462394656": {
-      "type": "slideshow",
-      "disabled": true,
-      "settings": {
-        "layout": "grid",
-        "slide_height": "small",
-        "slider_visual": "dots",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "featured_collection": {
+    "f0b35122-6a02-4d12-8622-ac9e66be22e2": {
       "type": "featured-collection",
       "settings": {
         "title": "FEATURED PRODUCTS",
@@ -188,7 +155,7 @@
         "padding_bottom": 36
       }
     },
-    "16648390836a45d2f6": {
+    "5d5231d7-3259-4cc6-882e-7c05044df15b": {
       "type": "video",
       "settings": {
         "heading": "",
@@ -202,35 +169,44 @@
         "padding_bottom": 24
       }
     },
-    "16639562035cf18479": {
+    "f91d1981-e760-473b-b1fc-81d514969f54": {
       "type": "multicolumn",
       "blocks": {
-        "1663956203e1054231-0": {
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-0": {
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pet_portrait_competition_2022.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Check It Out!",
-            "link": "https:\/\/www.trekell.com\/blogs\/experience\/2022-juried-pet-portrait-competition-winners"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "1663956203e1054231-2": {
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-1": {
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/E93610F1-C177-4480-9E8E-7696A42D0A00_a5b2920b-0530-4676-8aae-d952e7898754.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Sign Up Now",
-            "link": "https:\/\/us02web.zoom.us\/meeting\/register\/tZUsdOiuqDosGdxJmo_4VrPIr2YyQQWT8Hmv"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "1663956203e1054231-0",
-        "1663956203e1054231-2"
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-0",
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-1",
+        "template--15864993579196__f91d1981-e760-473b-b1fc-81d514969f54-16654813880352ae4e-2"
       ],
       "settings": {
         "title": "",
@@ -249,7 +225,7 @@
         "padding_bottom": 36
       }
     },
-    "166147048026e03e3c": {
+    "9986676c-d494-4006-8f02-082320594f6f": {
       "type": "featured-collection",
       "settings": {
         "title": "TOP SELLERS",
@@ -276,24 +252,24 @@
         "padding_bottom": 0
       }
     },
-    "1661551625cc495d5b": {
+    "de36e477-f23e-47a6-abbd-08bf37894fa8": {
       "type": "image-banner",
       "blocks": {
-        "1661551625fe6ca012-0": {
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-0": {
           "type": "heading",
           "settings": {
             "heading": "Join The Trekell Family And Become An Affiliate Partner!",
             "heading_size": "h1"
           }
         },
-        "1661551625fe6ca012-1": {
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-1": {
           "type": "text",
           "settings": {
             "text": "",
             "text_style": "body"
           }
         },
-        "1661551625fe6ca012-2": {
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-2": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Join Us!",
@@ -306,9 +282,9 @@
         }
       },
       "block_order": [
-        "1661551625fe6ca012-0",
-        "1661551625fe6ca012-1",
-        "1661551625fe6ca012-2"
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-0",
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-1",
+        "template--15864993579196__de36e477-f23e-47a6-abbd-08bf37894fa8-16654813937c5e630b-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Trekell_affiliate_program.webp",
@@ -324,24 +300,24 @@
         "show_text_below": true
       }
     },
-    "1661471458d696b245": {
+    "2d1cc81a-3eea-431c-80ff-cb4829e34d2a": {
       "type": "image-with-text",
       "blocks": {
-        "1661471458e9341e51-0": {
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-0": {
           "type": "heading",
           "settings": {
             "heading": "Protégé Brushes",
             "heading_size": "h1"
           }
         },
-        "1661471458e9341e51-1": {
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Trekell’s Protégé line is an ingeniously engineered, synthetic alternative to Kolinsky sable-hair -  a classic brush filament known for its retention and performance properties.<\/p>",
+            "text": "<p>Trekell’s Protégé line is an ingeniously engineered, synthetic alternative to Kolinsky sable-hair - a classic brush filament known for its retention and performance properties.<\/p>",
             "text_style": "body"
           }
         },
-        "1661471458e9341e51-2": {
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-2": {
           "type": "button",
           "settings": {
             "button_label": "LEARN MORE",
@@ -350,9 +326,9 @@
         }
       },
       "block_order": [
-        "1661471458e9341e51-0",
-        "1661471458e9341e51-1",
-        "1661471458e9341e51-2"
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-0",
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-1",
+        "template--15864993579196__2d1cc81a-3eea-431c-80ff-cb4829e34d2a-166548177147efe313-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Mees_Lifestyle2.webp",
@@ -368,24 +344,24 @@
         "padding_bottom": 36
       }
     },
-    "1661552390e6400ed6": {
+    "5449b422-51da-45f9-b594-106e4b11c024": {
       "type": "image-banner",
       "blocks": {
-        "1661552390453a80b6-0": {
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-0": {
           "type": "heading",
           "settings": {
             "heading": "Our In Kind Giving Program",
             "heading_size": "h1"
           }
         },
-        "1661552390453a80b6-1": {
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-1": {
           "type": "text",
           "settings": {
             "text": "We appreciate you thinking of Trekell for your event or cause! This application ensures we have all the information needed in regards to a possible donation. Due to the volume of applications received, we will only contact the applicants whose requests we are able to fulfill.",
             "text_style": "body"
           }
         },
-        "1661552390453a80b6-2": {
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-2": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Apply Here",
@@ -398,9 +374,9 @@
         }
       },
       "block_order": [
-        "1661552390453a80b6-0",
-        "1661552390453a80b6-1",
-        "1661552390453a80b6-2"
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-0",
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-1",
+        "template--15864993579196__5449b422-51da-45f9-b594-106e4b11c024-16654813937c5e630b-2"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Trekell_Giving_Program.webp",
@@ -416,10 +392,10 @@
         "show_text_below": true
       }
     },
-    "166395658879282fdd": {
+    "1c787683-df36-44e6-a384-7e034012c5a6": {
       "type": "multicolumn",
       "blocks": {
-        "1663956588701b4efc-0": {
+        "template--15864993579196__1c787683-df36-44e6-a384-7e034012c5a6-166548177141a38886-0": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/promotions_and_discounts.jpg",
@@ -429,7 +405,7 @@
             "link": "https:\/\/www.trekell.com\/pages\/promotions-discounts"
           }
         },
-        "1663956588701b4efc-2": {
+        "template--15864993579196__1c787683-df36-44e6-a384-7e034012c5a6-166548177141a38886-1": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Trekell_Product_Quiz.jpg",
@@ -441,8 +417,8 @@
         }
       },
       "block_order": [
-        "1663956588701b4efc-0",
-        "1663956588701b4efc-2"
+        "template--15864993579196__1c787683-df36-44e6-a384-7e034012c5a6-166548177141a38886-0",
+        "template--15864993579196__1c787683-df36-44e6-a384-7e034012c5a6-166548177141a38886-1"
       ],
       "settings": {
         "title": "",
@@ -461,17 +437,10 @@
         "padding_bottom": 36
       }
     },
-    "16615378337efbb523": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true,
-        "custom_class": ""
-      }
-    },
-    "16615409084f091953": {
+    "16654823833890276e": {
       "type": "apps",
       "blocks": {
-        "80b0a1f1-3c24-45b9-9c4b-a2e12d0d2e34": {
+        "53bfa75b-40d2-42ce-9214-5f83ddb7dbe7": {
           "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
           "settings": {
             "title": "INSTAGRAM",
@@ -497,27 +466,24 @@
         }
       },
       "block_order": [
-        "80b0a1f1-3c24-45b9-9c4b-a2e12d0d2e34"
+        "53bfa75b-40d2-42ce-9214-5f83ddb7dbe7"
       ],
       "settings": {
-        "include_margins": true,
-        "custom_class": ""
+        "include_margins": true
       }
     }
   },
   "order": [
     "rich_text",
-    "1661466663ea0d08c8",
-    "166147031462394656",
-    "featured_collection",
-    "16648390836a45d2f6",
-    "16639562035cf18479",
-    "166147048026e03e3c",
-    "1661551625cc495d5b",
-    "1661471458d696b245",
-    "1661552390e6400ed6",
-    "166395658879282fdd",
-    "16615378337efbb523",
-    "16615409084f091953"
+    "4ae742e7-9054-47ee-a31d-7be5a78e6eb5",
+    "f0b35122-6a02-4d12-8622-ac9e66be22e2",
+    "5d5231d7-3259-4cc6-882e-7c05044df15b",
+    "f91d1981-e760-473b-b1fc-81d514969f54",
+    "9986676c-d494-4006-8f02-082320594f6f",
+    "de36e477-f23e-47a6-abbd-08bf37894fa8",
+    "2d1cc81a-3eea-431c-80ff-cb4829e34d2a",
+    "5449b422-51da-45f9-b594-106e4b11c024",
+    "1c787683-df36-44e6-a384-7e034012c5a6",
+    "16654823833890276e"
   ]
 }

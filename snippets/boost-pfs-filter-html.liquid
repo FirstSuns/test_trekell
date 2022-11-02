@@ -3,7 +3,7 @@
 {%- when 'productGridItemHtml' -%}
 {%- raw -%}
 <li class="grid__item">
-  <div class="card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div class="card card--{{cardProductClass}}" style="--ratio-percent: {{imageAspectRatio}}%">
       <div class="card__inner {{cardInnerProductClass}}" style="--ratio-percent: {{imageAspectRatio}}%">
         {{itemImages}}
@@ -20,7 +20,7 @@
             {{itemSale}}
           </div>
         </div>
-        
+
       </div>
       <div class="card__content">
         <div class="card__information">
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </li>
 {%- endraw -%}
